@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Andrew Hoyt</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Andrew Hoyt</title>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
 
     :root {
@@ -15,7 +16,7 @@
     body {
       font-family: 'EB Garamond', serif;
       background-color: #f9f8f4;
-      color: #2f2f2f;
+      color: #1f1f1f;
       margin: 2em auto;
       max-width: 720px;
       line-height: 1.7;
@@ -46,7 +47,11 @@
       border-bottom: 1px dotted #aaa;
     }
 
-    nav a:hover {
+    nav a:visited {
+      color: #444;
+    }
+
+    a:hover {
       background-color: var(--hover-bg);
       transition: background-color 0.3s ease;
     }
@@ -59,6 +64,7 @@
 
     section {
       margin-bottom: 3em;
+      scroll-margin-top: 100px;
     }
 
     ul {
@@ -73,6 +79,10 @@
       transition: color 0.3s ease;
     }
 
+    a:visited {
+      color: #444;
+    }
+
     a:hover {
       color: var(--accent);
     }
@@ -85,6 +95,7 @@
       pointer-events: none;
       background: linear-gradient(to bottom, transparent, rgba(220, 210, 200, 0.05));
       mix-blend-mode: multiply;
+      z-index: 1;
       animation: drift 60s linear infinite;
     }
 
@@ -95,8 +106,41 @@
       .hidden {
       display: none;
     }
+      .scroll-cue {
+      position: fixed;
+      bottom: 1.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.4em;
+      color: #6a625a;
+      opacity: 0.6;
+      transition: opacity 0.5s ease;
+      background: none;
+      border: none;
+      animation: bounce 2s infinite;
+      pointer-events: none;
+      z-index: 10;
+}
+      position: fixed;
+      bottom: 1.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5em;
+      color: #bbb;
+      opacity: 0.6;
+      transition: opacity 0.5s ease;
+      animation: bounce 2s infinite;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    @keyframes bounce {
+     0%, 100% { transform: translateX(-50%) translateY(0); }
+     50% { transform: translateX(-50%) translateY(8px); }
+    }
+
   </style>
-  <script>
+<script>
     const now = new Date();
     const month = now.getMonth();
     const root = document.documentElement;
@@ -128,151 +172,140 @@
         const seasons = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'fall', 'fall', 'fall', 'winter'];
         seasonLabel.textContent = seasons[month] + ' ' + now.getFullYear();
       }
+          const scrollCue = document.querySelector('.scroll-cue');
+      if (scrollCue) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 20) {
+            scrollCue.style.opacity = '0';
+          }
+        });
+      }
     });
   </script>
 </head>
 <body>
-
-  <h1 style="font-weight: 500;">andrew mitchell hoyt</h1>
-  
-
-  <nav>
-    <a href="#about">about</a>
-    <a href="#writing">writing</a>
-    <a href="#presentations">presentations</a>
-    <a href="#cv">cv</a>
-    </nav>
-
-  <button onclick="document.getElementById('theme-map').classList.toggle('hidden')" style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">themes</button>
-<aside id="theme-map" style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;" class="hidden">
-    <div style="margin-bottom: 0.5em; font-weight: bold;">themes</div>
-    <div><a href="#cv" title="How institutions manage complexity and control" style="text-decoration: none; color: var(--accent);">governance</a></div>
-    <div><a href="#about" title="Things that do not resolve cleanly" style="text-decoration: none; color: var(--accent);">uncertainty</a></div>
-    <div><a href="#publications" title="Repairing what was broken by development or conquest" style="text-decoration: none; color: var(--accent);">restoration</a></div>
-    <div><a href="#about" title="The study of environments, organisms, and their interdependence" style="text-decoration: none; color: var(--accent);">ecology</a></div>
-    <div><a href="#about" title="Feedback, loops, complexity, emergence" style="text-decoration: none; color: var(--accent);">systems</a></div>
-  </aside>
-
-  <section id="about">
-    <h2>about</h2>
-    <p>Andrew Hoyt is a PhD candidate in the history of science at Princeton University. His research explores the relationship between governance and conceptions of natural order in a range of contexts, though he maintains broad interests in the twentieth-century life sciences, environmental and political history, and North American Indigenous history. His dissertation project, <em>Chaos Ecology: Science and Governance after Nature</em>, examines the rise of the "new ecology" in the final decades of the twentieth century. Departing from earlier conceptions of ecology as ordered and predictable, this scientific movement sought to redefine nature as messy, contingent, and constantly in flux. Hoyt's project traces new ecological ideas from their midcentury scientific and political origins to their lasting consequences for historical, social scientific, and postcolonial thought.</p>
-    <p>Hoyt also works on such topics as the politics of Ojibwe resource management and the development of the field of resource economics. His M.A. thesis, “Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950” examined the emergence of ecological restoration as a concept, research agenda, and set of practices, focusing on the dominant Midwestern grasses of corn, prairie tallgrass, and wild rice. He also maintains active interests in early modern science and material culture.</p>
-    <p>Before starting at Princeton, Andrew graduated <em>magna cum laude</em> from Carleton College with a B.A. in History and a background in ecological research. He went on to work as an energy analyst and climate policy advocate in Minneapolis for several years before completing an M.A. in History at Trent University in Ontario.</p>
-  </section>
-
-  
-
-  <section id="writing">
-    <h2>writing</h2>
-    <div class="publication">
-      <strong>“Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950.”</strong><br>
-      M.A. Thesis. Trent University, 2023. <a href="https://batadora.trentu.ca/islandora/ecology-settler-colonialism-and-environments-american-midwest-science-and-politics">link</a>
+<h1 style="font-weight: 500;">andrew mitchell hoyt</h1>
+<div class="scroll-cue">↓</div>
+<nav>
+<a href="#about">about</a>
+<a href="#writing">writing</a>
+<a href="#presentations">presentations</a>
+<a href="#cv">cv</a>
+</nav>
+<button onclick="document.getElementById('theme-map').classList.toggle('hidden')" style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">themes</button>
+<aside class="hidden" id="theme-map" style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;">
+<div style="margin-bottom: 0.5em; font-weight: bold;">themes</div>
+<div><a href="#cv" style="text-decoration: none; color: var(--accent);" title="How institutions manage complexity and control">governance</a></div>
+<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Things that do not resolve cleanly">uncertainty</a></div>
+<div><a href="#publications" style="text-decoration: none; color: var(--accent);" title="Repairing what was broken by development or conquest">restoration</a></div>
+<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="The study of environments, organisms, and their interdependence">ecology</a></div>
+<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">systems</a></div>
+</aside>
+<section id="about">
+<h2>about</h2>
+<p>Andrew Hoyt is a PhD candidate in the history of science at Princeton University. His research explores the relationship between governance and conceptions of natural order in a range of contexts, though he maintains broad interests in the twentieth-century life sciences, environmental and political history, and North American Indigenous history. His dissertation project, <em>Chaos Ecology: Science and Governance after Nature</em>, examines the rise of the "new ecology" in the final decades of the twentieth century. Departing from earlier conceptions of ecology as ordered and predictable, this scientific movement sought to redefine nature as messy, contingent, and constantly in flux. Hoyt's project traces new ecological ideas from their midcentury scientific and political origins to their lasting consequences for historical, social scientific, and postcolonial thought.</p>
+<p>Hoyt also works on such topics as the politics of Ojibwe resource management and the development of the field of resource economics. His M.A. thesis, “Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950” examined the emergence of ecological restoration as a concept, research agenda, and set of practices, focusing on the dominant Midwestern grasses of corn, prairie tallgrass, and wild rice. He also maintains active interests in early modern science and material culture.</p>
+<p>Before starting at Princeton, Andrew graduated <em>magna cum laude</em> from Carleton College with a B.A. in History and a background in ecological research. He went on to work as an energy analyst and climate policy advocate in Minneapolis for several years before completing an M.A. in History at Trent University in Ontario.</p>
+</section>
+<section id="writing">
+<h2>writing</h2>
+<div class="publication">
+<strong>“Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950.”</strong><br/>
+      M.A. Thesis. Trent University, 2023. <a href="https://batadora.trentu.ca/islandora/ecology-settler-colonialism-and-environments-american-midwest-science-and-politics" target="_blank">link</a>
+</div>
+<div class="publication">
+<strong>“What Minnesota's Mineral Gaze Overlooks.”</strong><br/>
+      Edge Effects Digital Magazine, July 2022. <a href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank">link</a>
+</div>
+<div class="publication">
+<strong>“Air Source Heat Pumps in Wisconsin: Multifamily and Single-Family Applications.”</strong><br/>
+      Focus on Energy R&amp;D Report, co-authored, October 2021.
     </div>
-    <div class="publication">
-      <strong>“What Minnesota's Mineral Gaze Overlooks.”</strong><br>
-      Edge Effects Digital Magazine, July 2022. <a href="https://edgeeffects.net/minnesota-mineral-gaze/">link</a>
-    </div>
-    <div class="publication">
-      <strong>“Air Source Heat Pumps in Wisconsin: Multifamily and Single-Family Applications.”</strong><br>
-      Focus on Energy R&D Report, co-authored, October 2021.
-    </div>
-    <div class="publication">
-      <strong>“Non-Native Liana, Euonymus Fortunei...”</strong><br>
+<div class="publication">
+<strong>“Non-Native Liana, Euonymus Fortunei...”</strong><br/>
       Plant Ecology 218 (2016): 329–343.
     </div>
-  </section>
-
-  <section id="presentations">
-    <h2>presentations</h2>
-    <div class="publication">
-      <strong>“Sovereignty through Stewardship: Wild Rice, Minnesota Ojibwe Resurgence, and the Politics of Relational Restoration.”</strong><br>
+</section>
+<section id="presentations">
+<h2>presentations</h2>
+<div class="publication">
+<strong>“Sovereignty through Stewardship: Wild Rice, Minnesota Ojibwe Resurgence, and the Politics of Relational Restoration.”</strong><br/>
       Technologies of Sovereignty Graduate Conference, Columbia University, February 2025
     </div>
-    <div class="publication">
-      <strong>“Theory and Practice in the Prairie: Plant Community Structure and the Foundations of Restoration Ecology.”</strong><br>
+<div class="publication">
+<strong>“Theory and Practice in the Prairie: Plant Community Structure and the Foundations of Restoration Ecology.”</strong><br/>
       History of Science Society Annual Conference, November 2022
     </div>
-    <div class="publication">
-      <strong>“A Tragedy in Common: H. Scott Gordon, the Fisherman’s Problem, and the Rationalizing High Modernism of Cold War Bioeconomics.”</strong><br>
+<div class="publication">
+<strong>“A Tragedy in Common: H. Scott Gordon, the Fisherman’s Problem, and the Rationalizing High Modernism of Cold War Bioeconomics.”</strong><br/>
       McGill-Queen’s Graduate History Conference
     </div>
-    <div class="publication">
-      <strong>“Quantifying the effects of aphid herbivore Aphis echinaceae on the fitness of Echinacea angustifolia.”</strong><br>
+<div class="publication">
+<strong>“Quantifying the effects of aphid herbivore Aphis echinaceae on the fitness of Echinacea angustifolia.”</strong><br/>
       Carleton College Student Research Symposium, October 2018
     </div>
-  </section>
-
-
-    <section id="cv">
-    <h2>cv</h2>
-    <p>See the complete record <a href="AMHoyt_CV.pdf" style="font-family: 'Courier Prime', monospace; color: var(--accent); text-decoration: underline dotted;">here</a>.</p>
-
-    <details>
+</section>
+<section id="cv">
+<h2>cv</h2>
+<p>See the complete record <a href="AMHoyt_CV.pdf" style="font-family: 'Courier Prime', monospace; color: var(--accent); text-decoration: underline dotted;" target="_blank">here</a>.</p>
+<details>
 <summary style="cursor: pointer; font-family: 'Courier Prime', monospace; font-size: 1.1em;">education</summary>
 <ul>
-  <li>PhD in History of Science, Princeton University (Expected 2028)</li>
-  <li>MA in History of Science, Princeton University (2025) — General Exams with Distinction</li>
-  <li>MA in History, Trent University (2023) — President’s Medal</li>
-  <li>BA in History, Carleton College (2019) — Magna cum laude</li>
+<li>PhD in History of Science, Princeton University (Expected 2028)</li>
+<li>MA in History of Science, Princeton University (2025) — General Exams with Distinction</li>
+<li>MA in History, Trent University (2023) — President’s Medal</li>
+<li>BA in History, Carleton College (2019) — Magna cum laude</li>
 </ul>
 </details>
-
-    <details style="margin-top: 1.5em;">
+<details style="margin-top: 1.5em;">
 <summary style="cursor: pointer; font-family: 'Courier Prime', monospace; font-size: 1.1em;">accolades</summary>
 <ul>
-  <li>Environmental History Fellow, American Society for Environmental History (2024–2025)</li>
-  <li>Graduate Student Essay Prize, ASEH (2024)</li>
-  <li>President’s Medal, Trent University (2023)</li>
-  <li>Ontario Graduate Scholarship, Trent University (2022)</li>
-  <li>Katherine S. McCarter Graduate Student Policy Award, Ecological Society of America (2022)</li>
-  <li>Alan Wilson Entrance Award, Trent University (2021)</li>
-  <li>Phi Beta Kappa, Carleton College (2019)</li>
-  <li>Laurence McKinley Gould Prize in Natural Science, Carleton College (2019)</li>
-  <li>Best Undergraduate Poster, University of Kentucky Tracy Farmer Institute (2014)</li>
+<li>Environmental History Fellow, American Society for Environmental History (2024–2025)</li>
+<li>Graduate Student Essay Prize, ASEH (2024)</li>
+<li>President’s Medal, Trent University (2023)</li>
+<li>Ontario Graduate Scholarship, Trent University (2022)</li>
+<li>Katherine S. McCarter Graduate Student Policy Award, Ecological Society of America (2022)</li>
+<li>Alan Wilson Entrance Award, Trent University (2021)</li>
+<li>Phi Beta Kappa, Carleton College (2019)</li>
+<li>Laurence McKinley Gould Prize in Natural Science, Carleton College (2019)</li>
+<li>Best Undergraduate Poster, University of Kentucky Tracy Farmer Institute (2014)</li>
 </ul>
 </details>
-
-
-    <details style="margin-top: 1.5em;">
+<details style="margin-top: 1.5em;">
 <summary style="cursor: pointer; font-family: 'Courier Prime', monospace; font-size: 1.1em;">teaching</summary>
 <ul>
-  <li><strong>Trent University School of the Environment</strong> – Graduate Teaching Assistant (2021–2023)<br>
+<li><strong>Trent University School of the Environment</strong> – Graduate Teaching Assistant (2021–2023)<br/>
     Supported undergraduate courses in environmental policy, restoration ecology, and environmental history.
   </li>
-  <li><strong>Princeton University</strong> – Anticipated teaching in history of science (2025–2028)<br>
+<li><strong>Princeton University</strong> – Anticipated teaching in history of science (2025–2028)<br/>
     Planned contributions to undergraduate seminars on science and empire, uncertainty in scientific knowledge, and systems theory.
   </li>
 </ul>
 </details>
-
-    
-
-    <details style="margin-top: 1.5em;">
-<summary style="cursor: pointer; font-family: 'Courier Prime', monospace; font-size: 1.1em;">service & advocacy</summary>
+<details style="margin-top: 1.5em;">
+<summary style="cursor: pointer; font-family: 'Courier Prime', monospace; font-size: 1.1em;">service &amp; advocacy</summary>
 <ul>
-  <li>Earth and Environment Forum Steering Committee, History of Science Society (HSS) (Since March 2024)</li>
-  <li>Graduate History Association Committee, Princeton University (Since Oct. 2023)</li>
-  <li>Communications Officer, HSS Graduate and Early Career Caucus (Since Feb. 2023)</li>
-  <li>History MA Program Director Search Committee, Trent University (Oct. 2022 – Feb. 2023)</li>
-  <li>History MA Program Committee, Trent University (Sept. 2022 – Aug. 2023)</li>
-  <li>Policy Action Team, MN350 (Dec. 2019 – Sept. 2021)</li>
-  <li>Student Departmental Advisor, Carleton College History Department (Sept. 2018 – June 2019)</li>
-  <li>Environmental Carls Organized Volunteer, Carleton College (Aug. 2018 – June 2019)</li>
+<li>Earth and Environment Forum Steering Committee, History of Science Society (HSS) (Since March 2024)</li>
+<li>Graduate History Association Committee, Princeton University (Since Oct. 2023)</li>
+<li>Communications Officer, HSS Graduate and Early Career Caucus (Since Feb. 2023)</li>
+<li>History MA Program Director Search Committee, Trent University (Oct. 2022 – Feb. 2023)</li>
+<li>History MA Program Committee, Trent University (Sept. 2022 – Aug. 2023)</li>
+<li>Policy Action Team, MN350 (Dec. 2019 – Sept. 2021)</li>
+<li>Student Departmental Advisor, Carleton College History Department (Sept. 2018 – June 2019)</li>
+<li>Environmental Carls Organized Volunteer, Carleton College (Aug. 2018 – June 2019)</li>
 </ul>
 </details>
-  </section>
-
-  <div id="season-label" style="position: fixed; bottom: 1em; right: 1em; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;"></div>
-  
-  <footer style="font-family: 'Courier Prime', monospace; font-size: 0.9em; color: #6a625a; text-align: center; margin-top: 4em;">
-    <ul style="list-style: none; padding: 0;">
-      <li><a href="mailto:amhoyt@princeton.edu">amhoyt@princeton.edu</a></li>
-      <li><a href="https://www.linkedin.com/in/andy-hoyt/">LinkedIn</a></li>
-      <li><a href="https://princeton.academia.edu/AndyHoyt">Academia.edu</a></li>
-    </ul>
-    <div style="margin-top: 2em;">
+</section>
+<div id="season-label" style="position: fixed; bottom: 1em; right: 1em; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;"></div>
+<footer style="font-family: 'Courier Prime', monospace; font-size: 0.9em; color: #6a625a; text-align: center; margin-top: 4em;">
+<ul style="list-style: none; padding: 0;">
+<li><a href="mailto:amhoyt@princeton.edu" style="color: #444; text-decoration: none;">amhoyt@princeton.edu</a></li>
+<li><a href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
+<li><a href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia.edu</a></li>
+</ul>
+<div style="margin-top: 2em;">
       this site accumulates like sediment. it forgets nothing, but remembers unevenly.
     </div>
-  </footer>
+</footer>
 </body>
 </html>
