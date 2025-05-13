@@ -47,7 +47,17 @@
       border-bottom: 1px dotted #aaa;
     }
 
-    nav a:visited {
+    nav .subtle-link {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .subtle-link:hover {
+      color: var(--accent);
+      text-decoration: underline dotted;
+    }
+
+    a:visited {
       color: #444;
     }
 
@@ -77,6 +87,16 @@
 
     a {
       transition: color 0.3s ease;
+    }
+
+    .subtle-link {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .subtle-link:hover {
+      color: var(--accent);
+      text-decoration: underline dotted;
     }
 
     a:visited {
@@ -189,7 +209,7 @@
 <nav>
 <a href="#about">about</a>
 <a href="#writing">writing</a>
-<a href="#presentations">presentations</a>
+<a href="#speaking">speaking</a>
 <a href="#cv">cv</a>
 </nav>
 <button onclick="document.getElementById('theme-map').classList.toggle('hidden')" style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">themes</button>
@@ -211,23 +231,27 @@
 <h2>writing</h2>
 <div class="publication">
 <strong>“Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950.”</strong><br/>
-      M.A. Thesis. Trent University, 2023. <a href="https://batadora.trentu.ca/islandora/ecology-settler-colonialism-and-environments-american-midwest-science-and-politics" target="_blank">link</a>
+      M.A. Thesis. Trent University, 2023. <a class="subtle-link" href="https://batadora.trentu.ca/islandora/ecology-settler-colonialism-and-environments-american-midwest-science-and-politics" target="_blank">link</a>
+</div>
+<div class="publication">
+<strong>“Defending the Arctic Refuge Companion Website.”</strong><br/>
+      With Finis Dunaway. Fall 2022. <a class="subtle-link" href="https://defendingthearcticrefuge.com/" target="_blank">link</a>
 </div>
 <div class="publication">
 <strong>“What Minnesota's Mineral Gaze Overlooks.”</strong><br/>
-      Edge Effects Digital Magazine, July 2022. <a href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank">link</a>
+      Edge Effects Digital Magazine, July 2022. <a class="subtle-link" href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank">link</a>
 </div>
 <div class="publication">
 <strong>“Air Source Heat Pumps in Wisconsin: Multifamily and Single-Family Applications.”</strong><br/>
-      Focus on Energy R&amp;D Report, co-authored, October 2021.
+      With the Minnesota Center for Energy and Environment Program Development Team. Focus on Energy R&D Report, October 2021.
     </div>
 <div class="publication">
-<strong>“Non-Native Liana, Euonymus Fortunei...”</strong><br/>
+<strong>“Non-Native Liana, Euonymus Fortunei, Associated with Increased Soil Nutrients, Unique Bacterial Communities, and Faster Decomposition Rate.”</strong><br/>
       Plant Ecology 218 (2016): 329–343.
     </div>
 </section>
-<section id="presentations">
-<h2>presentations</h2>
+<section id="speaking">
+<h2>speaking</h2>
 <div class="publication">
 <strong>“Sovereignty through Stewardship: Wild Rice, Minnesota Ojibwe Resurgence, and the Politics of Relational Restoration.”</strong><br/>
       Technologies of Sovereignty Graduate Conference, Columbia University, February 2025
@@ -241,8 +265,8 @@
       McGill-Queen’s Graduate History Conference
     </div>
 <div class="publication">
-<strong>“Quantifying the effects of aphid herbivore Aphis echinaceae on the fitness of Echinacea angustifolia.”</strong><br/>
-      Carleton College Student Research Symposium, October 2018
+<strong>“’He was on Your Side and You Knew It’: A Profile of Harvey Stork, Professor of Botany and Founder of the Carleton Arboretum.”</strong><br/>
+      Public Lecture at Carleton College, May 2019
     </div>
 </section>
 <section id="cv">
@@ -299,9 +323,9 @@
 <div id="season-label" style="position: fixed; bottom: 1em; right: 1em; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;"></div>
 <footer style="font-family: 'Courier Prime', monospace; font-size: 0.9em; color: #6a625a; text-align: center; margin-top: 4em;">
 <ul style="list-style: none; padding: 0;">
-<li><a href="mailto:amhoyt@princeton.edu" style="color: #444; text-decoration: none;">amhoyt@princeton.edu</a></li>
-<li><a href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
-<li><a href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia.edu</a></li>
+<li><a class="subtle-link" href="mailto:amhoyt@princeton.edu" style="">amhoyt@princeton.edu</a></li>
+<li><a class="subtle-link" href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
+<li><a class="subtle-link" href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia.edu</a></li>
 </ul>
 <div style="margin-top: 2em;">
       this site accumulates like sediment. it forgets nothing, but remembers unevenly.
