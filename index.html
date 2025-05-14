@@ -155,29 +155,23 @@
     const now = new Date();
     const month = now.getMonth();
     const root = document.documentElement;
-    let quote = "this site accumulates like sediment. it forgets nothing, but remembers unevenly.";
+    const now = new Date();
+const month = now.getMonth();
+const root = document.documentElement;
 
-    if (month >= 2 && month <= 4) {
-      root.style.setProperty('--accent', '#4b6b36');
-      root.style.setProperty('--hover-bg', '#e7f1e5');
-      quote = "what is rooted in spring may still drift come fall.";
-    } else if (month >= 5 && month <= 7) {
-      root.style.setProperty('--accent', '#2f5d77');
-      root.style.setProperty('--hover-bg', '#e2f0f6');
-      quote = "the archive expands in the heat, curling at the edges.";
-    } else if (month >= 8 && month <= 10) {
-      root.style.setProperty('--accent', '#6a4f3b');
-      root.style.setProperty('--hover-bg', '#f0e7da');
-      quote = "the leaves fall; the footnotes lengthen.";
-    } else {
-      root.style.setProperty('--accent', '#3b3f6a');
-      root.style.setProperty('--hover-bg', '#e6e9f0');
-      quote = "nothing stirs in the margin but memory.";
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const note = document.querySelector('.note');
-      if (note) note.textContent = quote;
+if (month >= 2 && month <= 4) {
+  root.style.setProperty('--accent', '#4b6b36');
+  root.style.setProperty('--hover-bg', '#e7f1e5');
+} else if (month >= 5 && month <= 7) {
+  root.style.setProperty('--accent', '#2f5d77');
+  root.style.setProperty('--hover-bg', '#e2f0f6');
+} else if (month >= 8 && month <= 10) {
+  root.style.setProperty('--accent', '#6a4f3b');
+  root.style.setProperty('--hover-bg', '#f0e7da');
+} else {
+  root.style.setProperty('--accent', '#3b3f6a');
+  root.style.setProperty('--hover-bg', '#e6e9f0');
+}
       const seasonLabel = document.getElementById('season-label');
       if (seasonLabel) {
         const seasons = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'fall', 'fall', 'fall', 'winter'];
@@ -206,11 +200,11 @@
 <button onclick="document.getElementById('theme-map').classList.toggle('hidden')" style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">themes</button>
 <aside class="hidden" id="theme-map" style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;">
 <div style="margin-bottom: 0.5em; font-weight: bold;">themes</div>
-<div><a href="#cv" style="text-decoration: none; color: var(--accent);" title="How institutions manage complexity and control">governance</a></div>
+<div><a href="#cv" style="text-decoration: none; color: var(--accent);" title="The management of things">governance</a></div>
 <div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Things that do not resolve cleanly">uncertainty</a></div>
 <div><a href="#publications" style="text-decoration: none; color: var(--accent);" title="Repairing what was broken by development or conquest">restoration</a></div>
 <div><a href="#about" style="text-decoration: none; color: var(--accent);" title="The study of environments, organisms, and their interdependence">ecology</a></div>
-<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">systems</a></div>
+<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">system</a></div>
 </aside>
 <section id="about">
 <h2>about</h2>
@@ -326,7 +320,7 @@
 </details>
 </section>
 <div id="season-label" style="position: fixed; bottom: 1em; right: 1em; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;"></div>
-<button id="back-to-top" title="Back to top">↑</button>
+
 <footer style="font-family: 'Courier Prime', monospace; font-size: 0.9em; color: #6a625a; text-align: center; margin-top: 4em;">
 <ul style="list-style: none; padding: 0;">
 <li><a class="subtle-link" href="mailto:amhoyt@princeton.edu" style="">amhoyt@princeton.edu</a></li>
@@ -334,9 +328,13 @@
 <li><a class="subtle-link" href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
 <li><a class="subtle-link" href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia</a></li>
 </ul>
-<div style="margin-top: 2em;">
-      this site accumulates like sediment. it forgets nothing, but remembers unevenly.
-    </div>
+<div onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+     style="cursor: pointer; font-style: italic; color: #6a625a; transition: color 0.3s ease;"
+     onmouseover="this.style.color='var(--accent)'"
+     onmouseout="this.style.color='#6a625a'"
+     title="Click to return to the top">
+  this site accumulates like sediment. it forgets nothing, but remembers unevenly.
+</div>
 </footer>
 </body>
 </html>
