@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    
 <head>
+    
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta name="description" content="Andrew Hoyt is a historian of science focused on ecological thought, governance, and postcolonial politics.">
+    
 <title>Andrew Hoyt</title>
+    
 <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
 
@@ -129,85 +133,99 @@
     }
 
   </style>
+    
 <script>
   const now = new Date();
-const month = now.getMonth();
-const root = document.documentElement;
+  const month = now.getMonth();
+  const root = document.documentElement;
 
-if (month >= 2 && month <= 4) {
-  root.style.setProperty('--accent', '#4b6b36');
-  root.style.setProperty('--hover-bg', '#e7f1e5');
-} else if (month >= 5 && month <= 7) {
-  root.style.setProperty('--accent', '#2f5d77');
-  root.style.setProperty('--hover-bg', '#e2f0f6');
-} else if (month >= 8 && month <= 10) {
-  root.style.setProperty('--accent', '#6a4f3b');
-  root.style.setProperty('--hover-bg', '#f0e7da');
-} else {
-  root.style.setProperty('--accent', '#3b3f6a');
-  root.style.setProperty('--hover-bg', '#e6e9f0');
-}
+  if (month >= 2 && month <= 4) {
+    root.style.setProperty('--accent', '#4b6b36');
+    root.style.setProperty('--hover-bg', '#e7f1e5');
+  } else if (month >= 5 && month <= 7) {
+    root.style.setProperty('--accent', '#2f5d77');
+    root.style.setProperty('--hover-bg', '#e2f0f6');
+  } else if (month >= 8 && month <= 10) {
+    root.style.setProperty('--accent', '#6a4f3b');
+    root.style.setProperty('--hover-bg', '#f0e7da');
+  } else {
+    root.style.setProperty('--accent', '#3b3f6a');
+    root.style.setProperty('--hover-bg', '#e6e9f0');
+  }
 
-const seasons = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'fall', 'fall', 'fall', 'winter'];
-const season = seasons[month];
+  const seasons = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'fall', 'fall', 'fall', 'winter'];
+  const season = seasons[month];
 
-const quotesBySeason = {
-spring: [
-  `"Spring is the time of plans and projects." — Tolstoy`,
-  `"The sun was warm but the wind was chill. / You know how it is with an April day." — Robert Frost`,
-  `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy`,
-  `"April is the cruelest month, breeding / Lilacs out of the dead land" — T. S. Eliot`,
-  `"Every separation is a link." — Simone Weil`
-],
-/*
-  Sources:
-  - Tolstoy, Anna Karenina, Part 1, Ch. 1
-  - Frost, “Two Tramps in Mud Time” (1934)
-  - Tolstoy, Resurrection
-  - T. S. Eliot, The Waste Land (1922)
-  - Weil, Gravity and Grace (1947)
-*/
-  summer: [
-    `"It was the season of excess, of bloom and blur and burn." — bell hooks`,
-    `"In the heat of the summer sun, there was something false and oppressive in everything." — Tolstoy`
-  ],
-    /* 
+  const quotesBySeason = {
+    spring: [
+      `"Spring is the time of plans and projects." — Tolstoy`,
+      `"The sun was warm but the wind was chill. / You know how it is with an April day." — Robert Frost`,
+      `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy`,
+      `"April is the cruelest month, breeding / Lilacs out of the dead land" — T. S. Eliot`,
+      `"Every separation is a link." — Simone Weil`
+    ],
+    /*
+      Sources:
+      - Tolstoy, Anna Karenina, Part 1, Ch. 1
+      - Frost, “Two Tramps in Mud Time” (1934)
+      - Tolstoy, Resurrection
+      - T. S. Eliot, The Waste Land (1922)
+      - Weil, Gravity and Grace (1947)
+    */
+
+    summer: [
+      `"It was the season of excess, of bloom and blur and burn." — bell hooks`,
+      `"In the heat of the summer sun, there was something false and oppressive in everything." — Tolstoy`
+    ],
+    /*
       Sources:
       - bell hooks, Belonging: A Culture of Place (2009)
       - Tolstoy, Anna Karenina (Book 2)
     */
-fall: [
-  `"The tints of autumn... a melancholy and graceful robe." — Hawthorne`,
-  `"Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long..." — Rilke`,
-  `"To be rooted is perhaps the most important and least recognized need of the human soul." — Simone Weil`
-],
-/*
-  Sources:
-  - Hawthorne, “The Old Manse” (1846)
-  - Rilke, “Herbsttag” / “Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
-  - Weil, The Need for Roots (1949)
-*/
-winter: [
-  `"In seed time learn, in harvest teach, in winter enjoy." — William Blake`,
-  `"A beautiful thing, though always a source of sadness, is never sad in itself." — Simone Weil`,
-  `"There’s a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes." — Emily Dickinson`
-],
-};
-/*
-  Sources:
-  - Blake, The Marriage of Heaven and Hell (1790–93)
-  - Weil, Gravity and Grace (1947)
-  - Dickinson, “There’s a certain Slant of light” (Poem 258, ca. 1861)
-*/
 
-const seasonalQuote = document.getElementById('seasonal-quote');
-if (seasonalQuote && quotesBySeason[season]) {
-  const quotes = quotesBySeason[season];
-  const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  seasonalQuote.textContent = quote;
-}
+    fall: [
+      `"The tints of autumn... a melancholy and graceful robe." — Hawthorne`,
+      `"Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long..." — Rilke`,
+      `"To be rooted is perhaps the most important and least recognized need of the human soul." — Simone Weil`
+    ],
+    /*
+      Sources:
+      - Hawthorne, “The Old Manse” (1846)
+      - Rilke, “Herbsttag” / “Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
+      - Weil, The Need for Roots (1949)
+    */
+
+    winter: [
+      `"In seed time learn, in harvest teach, in winter enjoy." — William Blake`,
+      `"A beautiful thing, though always a source of sadness, is never sad in itself." — Simone Weil`,
+      `"There’s a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes." — Emily Dickinson`,
+      `"Even silence is an answer." — Wendell Berry`
+    ]
+    /*
+      Sources:
+      - Blake, The Marriage of Heaven and Hell (1790–93)
+      - Weil, Gravity and Grace (1947)
+      - Dickinson, “There’s a certain Slant of light” (Poem 258, ca. 1861)
+      - Berry, from “Healing” in *What Are People For?* (1990)
+    */
+  };
+
+  const seasonalQuote = document.getElementById('seasonal-quote');
+  if (seasonalQuote && quotesBySeason[season]) {
+    const quotes = quotesBySeason[season];
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    seasonalQuote.textContent = quote;
+  }
+
+  const seasonLabel = document.getElementById('season-label');
+  if (seasonLabel) {
+    seasonLabel.textContent = season + ' ' + now.getFullYear();
+  }
 </script>
+    
 </head>
+
+    
 <body>
 <h1 style="font-weight: 500;">andrew mitchell hoyt</h1>
 <nav>
