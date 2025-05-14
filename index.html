@@ -119,6 +119,7 @@
   </style>
     
 <script>
+ window.addEventListener('DOMContentLoaded', () => {
   const now = new Date();
   const month = now.getMonth();
   const root = document.documentElement;
@@ -205,6 +206,7 @@
   if (seasonLabel) {
     seasonLabel.textContent = season + ' ' + now.getFullYear();
   }
+ });
 </script>
     
 </head>
