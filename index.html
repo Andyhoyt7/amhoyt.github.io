@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Andrew Hoyt is a historian of science focused on ecological thought, governance, and postcolonial politics." />
+    <meta name="description" content="Andrew Hoyt is a historian of science focused on ecological thought and governance." />
+    
     <title>Andrew M. Hoyt</title>
-
+    <link id="dynamic-favicon" rel="icon" type="image/png" href="fall_icon_fixed.png">
+    
     <style>
       @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
 
@@ -146,6 +148,19 @@
     ];
     const season = seasons[month];
 
+    const favicon = document.getElementById('dynamic-favicon');
+
+    const seasonalFavicons = {
+      spring: "img/spring.png",
+      summer: "img/summer.png",
+      fall: "img/fall.png",
+      winter: "img/winter.png"
+    };
+
+    if (favicon && seasonalFavicons[season]) {
+      favicon.href = seasonalFavicons[season];
+    }
+    
     const quotesBySeason = {
       spring: [
         `"Spring is the time of plans and projects." — Tolstoy`,
