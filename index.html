@@ -146,8 +146,7 @@
       `"Spring is the time of plans and projects." — Tolstoy`,
       `"The sun was warm but the wind was chill. / You know how it is with an April day." — Robert Frost`,
       `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy`,
-      `"April is the cruelest month, breeding / Lilacs out of the dead land" — T. S. Eliot`,
-      `"Every separation is a link." — Simone Weil`
+      `"April is the cruelest month, breeding / Lilacs out of the dead land" — T. S. Eliot`
     ],
     /*
       Sources:
@@ -155,7 +154,7 @@
       - Frost, “Two Tramps in Mud Time” (1934)
       - Tolstoy, Resurrection
       - T. S. Eliot, The Waste Land (1922)
-      - Weil, Gravity and Grace (1947)
+      - Weil, Gravity and Grace (1947) Not sure about this one -`"Every separation is a link." — Simone Weil`
     */
 
     summer: [
@@ -220,7 +219,8 @@
 <a href="#speaking">speaking</a>
 <a href="#cv">cv</a>
 </nav>
-    
+
+<!--
 <button onclick="document.getElementById('theme-map').classList.toggle('hidden')" style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">themes</button>
 <aside class="hidden" id="theme-map" style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;">
 <div style="margin-bottom: 0.5em; font-weight: bold;">themes</div>
@@ -230,7 +230,8 @@
 <div><a href="#about" style="text-decoration: none; color: var(--accent);" title="The study of environments, organisms, and their interdependence">ecology</a></div>
 <div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">system</a></div>
 </aside>
-    
+-->
+
 <section id="about">
 <h2>about</h2>
 <p>I am a PhD candidate in the history of science at Princeton University with interests in the twentieth-century life sciences, environmental and political history, and North American Indigenous history. My dissertation project, tenatatively titled <em>Chaos Ecology: Science and Governance after Nature</em>, examines the rise of the "new ecology" in the final decades of the twentieth century. Departing from earlier conceptions of ecology as ordered and predictable, this scientific movement sought to redefine nature as messy, contingent, and constantly in flux. Hoyt's project traces new ecological ideas from their midcentury scientific and political origins to their lasting consequences for historical, social scientific, and postcolonial thought.</p>
@@ -361,14 +362,16 @@
 <li><a class="subtle-link" href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia</a></li>
 </ul>
 </footer>
-
-<div id="seasonal-quote"
-     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-     style="cursor: pointer; font-style: italic; color: #6a625a; transition: color 0.3s ease;"
-     onmouseover="this.style.color='var(--accent)'"
-     onmouseout="this.style.color='#6a625a'"
-     title="Click to return to the top">
-</div>
+    
+<details style="margin-top: 1.5em;">
+  <div id="seasonal-quote"
+       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+       style="cursor: pointer; font-style: italic; color: #6a625a; transition: color 0.3s ease; text-align: center;"
+       onmouseover="this.style.color='var(--accent)'"
+       onmouseout="this.style.color='#6a625a'"
+       title="Take me back">
+  </div>
+</details>
     
 </body>
 </html>
