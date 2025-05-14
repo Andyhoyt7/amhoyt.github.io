@@ -127,28 +127,6 @@
       .hidden {
       display: none;
     }
-      .scroll-cue {
-      position: fixed;
-      bottom: 1.5em;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.4em;
-      color: #6a625a;
-      opacity: 0.6;
-      transition: opacity 0.5s ease;
-      background: none;
-      border: none;
-      animation: bounce 2s infinite;
-      pointer-events: none;
-      z-index: 10;
-}
-
-    }
-
-    @keyframes bounce {
-     0%, 100% { transform: translateX(-50%) translateY(0); }
-     50% { transform: translateX(-50%) translateY(8px); }
-    }
 
   </style>
 <script>
@@ -177,13 +155,15 @@ const quotesBySeason = {
   spring: [
     `"Spring is the time of plans and projects." — Tolstoy`,
     `"The sun was warm but the wind was chill. / You know how it is with an April day." — Robert Frost`,
-    `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy` 
+    `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy`, 
+    `"April is the cruelest month, breeding / Lilacs out of the dead land" — T. S. Eliot`
   ],
     /*
       Sources:
       - Tolstoy, Anna Karenina, Part 1, Ch. 1
       - Frost, “Two Tramps in Mud Time” (1934)
       - Tolstoy, Resurrection
+      — T. S. Eliot, The Waste Land
     */
   summer: [
     `"It was the season of excess, of bloom and blur and burn." — bell hooks`,
@@ -194,13 +174,15 @@ const quotesBySeason = {
       - bell hooks, Belonging: A Culture of Place (2009)
       - Tolstoy, Anna Karenina (Book 2)
     */
-  fall: [
-    `"The tints of autumn... a melancholy and graceful robe." — Hawthorne`,
-  ],
-    /* 
-      Sources:
-      - Hawthorne, “The Old Manse” (1846)
-    */
+fall: [
+  `"The tints of autumn... a melancholy and graceful robe." — Hawthorne`,
+  `"Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long..." — Rilke`
+],
+/* 
+  Sources:
+  - Hawthorne, “The Old Manse” (1846)
+  - Rilke, “Herbsttag” / “Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
+*/
   winter: [
     `"In seed time learn, in harvest teach, in winter enjoy." — William Blake`,
   ]
@@ -220,7 +202,6 @@ if (seasonalQuote && quotesBySeason[season]) {
 </head>
 <body>
 <h1 style="font-weight: 500;">andrew mitchell hoyt</h1>
-<div class="scroll-cue">↓</div>
 <nav>
 <a href="#about">about</a>
 <a href="#writing">writing</a>
