@@ -152,19 +152,21 @@ const seasons = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'su
 const season = seasons[month];
 
 const quotesBySeason = {
-  spring: [
-    `"Spring is the time of plans and projects." — Tolstoy`,
-    `"The sun was warm but the wind was chill. / You know how it is with an April day." — Robert Frost`,
-    `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy`, 
-    `"April is the cruelest month, breeding / Lilacs out of the dead land" — T. S. Eliot`
-  ],
-    /*
-      Sources:
-      - Tolstoy, Anna Karenina, Part 1, Ch. 1
-      - Frost, “Two Tramps in Mud Time” (1934)
-      - Tolstoy, Resurrection
-      — T. S. Eliot, The Waste Land
-    */
+spring: [
+  `"Spring is the time of plans and projects." — Tolstoy`,
+  `"The sun was warm but the wind was chill. / You know how it is with an April day." — Robert Frost`,
+  `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy`,
+  `"April is the cruelest month, breeding / Lilacs out of the dead land" — T. S. Eliot`,
+  `"Every separation is a link." — Simone Weil`
+],
+/*
+  Sources:
+  - Tolstoy, Anna Karenina, Part 1, Ch. 1
+  - Frost, “Two Tramps in Mud Time” (1934)
+  - Tolstoy, Resurrection
+  - T. S. Eliot, The Waste Land (1922)
+  - Weil, Gravity and Grace (1947)
+*/
   summer: [
     `"It was the season of excess, of bloom and blur and burn." — bell hooks`,
     `"In the heat of the summer sun, there was something false and oppressive in everything." — Tolstoy`
@@ -176,22 +178,27 @@ const quotesBySeason = {
     */
 fall: [
   `"The tints of autumn... a melancholy and graceful robe." — Hawthorne`,
-  `"Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long..." — Rilke`
+  `"Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long..." — Rilke`,
+  `"To be rooted is perhaps the most important and least recognized need of the human soul." — Simone Weil`
 ],
-/* 
+/*
   Sources:
   - Hawthorne, “The Old Manse” (1846)
   - Rilke, “Herbsttag” / “Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
+  - Weil, The Need for Roots (1949)
 */
-  winter: [
-    `"In seed time learn, in harvest teach, in winter enjoy." — William Blake`,
-  ]
-    /* 
-      Sources:
-      - Blake, The Marriage of Heaven and Hell (1790–93)
-    */
-};
-
+winter: [
+  `"In seed time learn, in harvest teach, in winter enjoy." — William Blake`,
+  `"A beautiful thing, though always a source of sadness, is never sad in itself." — Simone Weil`,
+  `"There’s a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes." — Emily Dickinson`
+],
+/*
+  Sources:
+  - Blake, The Marriage of Heaven and Hell (1790–93)
+  - Weil, Gravity and Grace (1947)
+  - Dickinson, “There’s a certain Slant of light” (Poem 258, ca. 1861)
+*/
+    
 const seasonalQuote = document.getElementById('seasonal-quote');
 if (seasonalQuote && quotesBySeason[season]) {
   const quotes = quotesBySeason[season];
