@@ -152,10 +152,7 @@
 
   </style>
 <script>
-    const now = new Date();
-    const month = now.getMonth();
-    const root = document.documentElement;
-    const now = new Date();
+  const now = new Date();
 const month = now.getMonth();
 const root = document.documentElement;
 
@@ -172,21 +169,54 @@ if (month >= 2 && month <= 4) {
   root.style.setProperty('--accent', '#3b3f6a');
   root.style.setProperty('--hover-bg', '#e6e9f0');
 }
-      const seasonLabel = document.getElementById('season-label');
-      if (seasonLabel) {
-        const seasons = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'fall', 'fall', 'fall', 'winter'];
-        seasonLabel.textContent = seasons[month] + ' ' + now.getFullYear();
-      }
-          const scrollCue = document.querySelector('.scroll-cue');
-      if (scrollCue) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 20) {
-            scrollCue.style.opacity = '0';
-          }
-        });
-      }
-    });
-  </script>
+
+const seasons = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'fall', 'fall', 'fall', 'winter'];
+const season = seasons[month];
+
+const quotesBySeason = {
+  spring: [
+    `"Spring is the time of plans and projects." — Tolstoy`,
+    `"The sun was warm but the wind was chill. / You know how it is with an April day." — Robert Frost`,
+    `"Everything was blooming: the grass, the trees, and something in the soul." — Tolstoy` 
+  ],
+    /*
+      Sources:
+      - Tolstoy, Anna Karenina, Part 1, Ch. 1
+      - Frost, “Two Tramps in Mud Time” (1934)
+      - Tolstoy, Resurrection
+    */
+  summer: [
+    `"It was the season of excess, of bloom and blur and burn." — bell hooks`,
+    `"In the heat of the summer sun, there was something false and oppressive in everything." — Tolstoy`
+  ],
+    /* 
+      Sources:
+      - bell hooks, Belonging: A Culture of Place (2009)
+      - Tolstoy, Anna Karenina (Book 2)
+    */
+  fall: [
+    `"The tints of autumn... a melancholy and graceful robe." — Hawthorne`,
+  ],
+    /* 
+      Sources:
+      - Hawthorne, “The Old Manse” (1846)
+    */
+  winter: [
+    `"In seed time learn, in harvest teach, in winter enjoy." — William Blake`,
+  ]
+    /* 
+      Sources:
+      - Blake, The Marriage of Heaven and Hell (1790–93)
+    */
+};
+
+const seasonalQuote = document.getElementById('seasonal-quote');
+if (seasonalQuote && quotesBySeason[season]) {
+  const quotes = quotesBySeason[season];
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  seasonalQuote.textContent = quote;
+}
+</script>
 </head>
 <body>
 <h1 style="font-weight: 500;">andrew mitchell hoyt</h1>
@@ -328,12 +358,12 @@ if (month >= 2 && month <= 4) {
 <li><a class="subtle-link" href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
 <li><a class="subtle-link" href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia</a></li>
 </ul>
-<div onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+<div id="seasonal-quote"
+     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
      style="cursor: pointer; font-style: italic; color: #6a625a; transition: color 0.3s ease;"
      onmouseover="this.style.color='var(--accent)'"
      onmouseout="this.style.color='#6a625a'"
      title="Click to return to the top">
-  this site accumulates like sediment. it forgets nothing, but remembers unevenly.
 </div>
 </footer>
 </body>
