@@ -24,15 +24,8 @@
       :root {
         --accent: #6a4f3b;
         --hover-bg: #eae6da;
-
-        /* Tolstoy palette for subtle accents */
-        --tolstoy-steppe-green: #6d826a;
-        --tolstoy-birch-bark: #ede6da;
-        --tolstoy-tea-brown: #8d7351;
-        --tolstoy-ink-black: #2f2f2f;
-        --tolstoy-candlelight-gold: #eed17c;
-        --tolstoy-dacha-blue: #a3b9c9;
       }
+
 
       body {
         font-family: 'EB Garamond', serif;
@@ -101,36 +94,14 @@
       }
 
       .note {
-        font-size: 0.94em;
+        font-size: 0.9em;
         font-style: italic;
-        color: var(--tolstoy-dacha-blue);
-        background: linear-gradient(90deg, var(--tolstoy-birch-bark) 65%, transparent 100%);
-        border-left: 2.5px solid var(--tolstoy-candlelight-gold);
-        padding-left: 0.7em;
-        margin: 1.3em 0 1em 0;
-        display: block;
+        color: #6a625a;
       }
 
-      /* Section borders for visual rhythm (rotating through palette) */
       section {
         margin-bottom: 3em;
         scroll-margin-top: 100px;
-        border-top: 2.5px solid var(--tolstoy-steppe-green);
-        padding-top: 2.2em;
-        background: rgba(237,230,218,0.10); /* subtle birch overlay */
-        border-radius: 0 0 14px 14px;
-      }
-      section#writing {
-        border-top: 2.5px solid var(--tolstoy-dacha-blue);
-        background: rgba(163,185,201,0.07);
-      }
-      section#speaking {
-        border-top: 2.5px solid var(--tolstoy-tea-brown);
-        background: rgba(141,115,81,0.04);
-      }
-      section#cv {
-        border-top: 2.5px solid var(--tolstoy-candlelight-gold);
-        background: rgba(238,209,124,0.06);
       }
 
       ul {
@@ -168,31 +139,14 @@
         display: none;
       }
 
-      /* Enhanced details/summary style with palette */
-      details {
-        margin-bottom: 1.3em;
-        border-radius: 7px;
-        border: 1.5px solid var(--tolstoy-birch-bark);
-        background: rgba(237,230,218,0.13);
-        box-shadow: 0 1px 8px 0 rgba(70,60,40,0.05);
-        padding: 0.7em 1em 0.7em 1em;
-        transition: box-shadow 0.2s;
-      }
-      details[open] {
-        box-shadow: 0 2px 12px 0 rgba(109,130,106,0.08);
-        border-color: var(--tolstoy-steppe-green);
-      }
-
       details summary {
         font-weight: 600;
         font-size: 1.08em;
         cursor: pointer;
-        color: var(--accent);
         outline: none;
         transition: color 0.25s;
         display: flex;
         align-items: center;
-        margin-bottom: 0.4em;
       }
 
       details[open] summary {
@@ -205,14 +159,12 @@
         margin-right: 0.45em;
         transition: transform 0.25s;
         font-size: 1em;
-        color: var(--tolstoy-steppe-green);
       }
 
       details[open] summary::before {
         transform: rotate(90deg);
-        color: var(--tolstoy-tea-brown);
       }
-
+      
     </style>
 <!-- Script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
 <script data-goatcounter="https://amhoyt.goatcounter.com/count"
@@ -329,8 +281,7 @@
 <body>
   
   <h1>Andrew Mitchell Hoyt</h1>
-  <hr style="border: 0; border-top: 2.5px solid var(--tolstoy-steppe-green); margin-bottom: 1.0em; opacity:0.3;">
-
+  
   <nav>
     <a href="#in-brief">in brief</a>
     <a href="#writing">writing</a>
@@ -338,6 +289,8 @@
     <a href="#cv">cv</a>
   </nav>
 
+  <hr style="border: 0; border-top: 2.5px solid var(--tolstoy-steppe-green); margin-bottom: 1.0em; opacity:0.3;">
+  
   <!--
   <button onclick="document.getElementById('theme-map').classList.toggle('hidden')"
           style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">
