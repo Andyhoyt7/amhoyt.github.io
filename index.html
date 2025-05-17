@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Andrew Hoyt is a historian of science focused on ecological thought and governance." />
+    <meta name="description" content="Andrew Hoyt is a historian of science focused on ecology, governance, and the politics of nature." />
     
-    <title>Andrew M. Hoyt</title>
+    <title>Andrew Hoyt</title>
     <link id="dynamic-favicon" rel="icon" type="image/png" href="img/spring.png">
     
     <style>
@@ -15,6 +15,16 @@
         --accent: #6a4f3b;
         --hover-bg: #eae6da;
       }
+      /* Open graph and twitter tags */
+      <meta property="og:title" content="Andrew M. Hoyt – Historian of Science" />
+      <meta property="og:description" content="Andrew Hoyt is a historian focused on ecology, governance, and the politics of nature." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.amhoyt.com/" />
+      <meta property="og:image" content="https://www.amhoyt.com/img/summer.png" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Andrew M. Hoyt – Historian of Science" />
+      <meta name="twitter:description" content="Andrew Hoyt is a historian focused on ecology, governance, and the politics of nature." />
+      <meta name="twitter:image" content="https://www.amhoyt.com/img/summer.png" />
 
       body {
         font-family: 'EB Garamond', serif;
@@ -42,6 +52,13 @@
       }
 
       nav {
+        position: sticky;
+        top: 0;
+        background: rgba(249, 248, 244, 0.92);
+        z-index: 100;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        border-bottom: 1px solid #eae6da;
         margin-bottom: 2em;
       }
 
@@ -52,19 +69,19 @@
         border-bottom: 1px dotted #aaa;
       }
       
-.subtle-link {
-  color: inherit;
-  text-decoration: underline dotted var(--accent);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 0.3s ease, text-decoration-color 0.3s ease;
-}
+      .subtle-link {
+        color: inherit;
+        text-decoration: underline dotted var(--accent);
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        transition: color 0.3s ease, text-decoration-color 0.3s ease;
+      }
 
-.subtle-link:hover {
-  color: var(--accent);
-  text-decoration-thickness: 1.2px;
-  text-underline-offset: 3px;
-}
+      .subtle-link:hover {
+        color: var(--accent);
+        text-decoration-thickness: 1.2px;
+        text-underline-offset: 3px;
+      }
       
       a:visited {
         color: #444;
@@ -120,6 +137,34 @@
       .hidden {
         display: none;
       }
+
+      details summary {
+        font-weight: 600;
+        font-size: 1.08em;
+        cursor: pointer;
+        color: var(--accent);
+        outline: none;
+        transition: color 0.25s;
+        display: flex;
+        align-items: center;
+      }
+
+      details[open] summary {
+        color: #2f2f2f;
+      }
+
+      details summary::before {
+        content: "›";
+        display: inline-block;
+        margin-right: 0.45em;
+        transition: transform 0.25s;
+        font-size: 1em;
+      }
+
+      details[open] summary::before {
+        transform: rotate(90deg);
+      }
+      
     </style>
 <!-- Script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
 <script data-goatcounter="https://amhoyt.goatcounter.com/count"
@@ -236,7 +281,13 @@
 <body>
   
   <h1>Andrew Mitchell Hoyt</h1>
+  <hr style="border: 0; border-top: 2.5px solid var(--tolstoy-steppe-green); margin-bottom: 1.5em; opacity:0.3;">
+  <p id="tagline" style="margin-top: -0.7em; margin-bottom: 2em; font-size: 1.2em; font-style: italic; color: #6a625a;">
+  Ecology, governance, and the politics of nature.
+  </p>
 
+  
+  
   <nav>
     <a href="#in-brief">in brief</a>
     <a href="#writing">writing</a>
