@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Andrew Hoyt is a historian of science focused on ecology, governance, and the politics of nature." />
+    <meta name="description" content="Andrew Hoyt is a historian of science focused on ecology, governance, and the politics of nature."        />
     
     <meta property="og:title" content="Andrew M. Hoyt – Historian of Science" />
     <meta property="og:description" content="Andrew Hoyt is a historian focused on ecology, governance, and the politics of nature." />
@@ -26,7 +26,6 @@
         --hover-bg: #eae6da;
       }
 
-
       body {
         font-family: 'EB Garamond', serif;
         background-color: #f9f8f4;
@@ -43,7 +42,7 @@
         font-family: 'Courier Prime', monospace;
         font-weight: 300;
         font-size: 2.2em;
-        margin: 2em 0 0.2em;
+        margin: 2em 0 0.05em; /* Even less space under title */
       }
       
       h2 {
@@ -57,10 +56,10 @@
         top: 0;
         background: rgba(249, 248, 244, 0.92);
         z-index: 100;
-        padding-top: 0.6em;
-        padding-bottom: 0.6em;
+        padding-top: 0.25em;    /* Tighter nav bar */
+        padding-bottom: 0.25em; /* Tighter nav bar */
         border-bottom: 1px solid #eae6da;
-        margin-bottom: 2em;
+        margin-bottom: 0.7em;   /* Closer to in-brief */
       }
 
       nav a {
@@ -139,6 +138,10 @@
         display: none;
       }
 
+      details {
+        margin-bottom: 1.2em; /* Modest, even spacing */
+      }
+
       details summary {
         font-weight: 600;
         font-size: 1.08em;
@@ -163,6 +166,11 @@
 
       details[open] summary::before {
         transform: rotate(90deg);
+      }
+
+      hr {
+        margin-top: 0.3em;   /* Tighter above */
+        margin-bottom: 0.3em;/* Tighter below */
       }
       
     </style>
@@ -288,8 +296,6 @@
     <a href="#speaking">speaking</a>
     <a href="#cv">cv</a>
   </nav>
-
-  <hr style="border: 0; border-top: 2.5px solid var(--tolstoy-steppe-green); margin-bottom: 1.0em; opacity:0.3;">
   
   <!--
   <button onclick="document.getElementById('theme-map').classList.toggle('hidden')"
@@ -317,11 +323,6 @@
     <p>
       My M.A. thesis considered this question by tracing the rise of ecological restoration as a concept, research agenda, and set of management interventions in the Midwestern United States, focusing especially on the science and politics of the region's characteristic grasses: prairie tallgrass, corn, and wild rice. More recently, I’ve been writing about Ojibwe relational restoration as a form of world-making and the political and ecological ideals embodied by shifting public land management regimes in the Corn Belt.
     </p>  
-    <!--
-    <p>
-      My dissertation project, tentatively titled "Chaos Ecology: Science and Governance after Nature," examines the rise of the "new ecology" in the final decades of the twentieth century. Departing from earlier conceptions of ecology as ordered and predictable, this scientific movement sought to redefine nature as messy, contingent, and constantly in flux. The project traces new ecological ideas from their midcentury origins in perceptions of scientific and political crisis to their lasting consequences for historical, social scientific, and postcolonial thought.
-    </p>
-    -->
     <p>
       Before starting at Princeton, I graduated from Carleton College with a B.A. in History, a minor in Medieval and Renaissance Studies, and a background in ecological research. I went on to work as an energy analyst and climate policy advocate in Minneapolis for several years before completing an M.A. in History at Trent University in Ontario.
     </p>
