@@ -24,7 +24,14 @@
       :root {
         --accent: #6a4f3b;
         --hover-bg: #eae6da;
+        --steppe-green: #6d826a;
+        --birch-bark: #ede6da;
+        --tea-brown: #8d7351;
+        --ink-black: #2f2f2f;
+        --candlelight-gold: #eed17c;
+        --dacha-blue: #a3b9c9;
       }
+
 
       body {
         font-family: 'EB Garamond', serif;
@@ -51,15 +58,42 @@
         margin-top: 2em;
       }
 
+      .section-heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2em;
+      }
+
+      .section-rule {
+        display: inline-block;
+        height: 3px;
+        border-radius: 1.5px;
+        width: 2.8em;
+        margin-right: 1.1em;
+        margin-bottom: 0.1em;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      }
+
+      .section-rule.writing  { background: var(--candlelight-gold); }
+      .section-rule.speaking { background: var(--dacha-blue); }
+      .section-rule.cv       { background: var(--tea-brown); }
+      .section-heading h2 {
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier Prime', monospace;
+  	text-transform: lowercase;
+  	font-size: 1.5em;
+  	font-weight: 400;
+      }
+
       nav {
         position: sticky;
         top: 0;
         background: rgba(249, 248, 244, 0.92);
         z-index: 100;
-        padding-top: 0.25em;    /* Tighter nav bar */
-        padding-bottom: 0.25em; /* Tighter nav bar */
-        border-bottom: 1px solid #eae6da;
-        margin-bottom: 0.7em;   /* Closer to in-brief */
+        padding-top: 0.25em;   
+        padding-bottom: 0.25em;
+	border-bottom: 2.5px solid rgba(237, 230, 218, 0.9);
       }
 
       nav a {
@@ -179,23 +213,24 @@
         async src="//gc.zgo.at/count.js"></script>    
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    const now = new Date();
-    const month = now.getMonth();
-    const root = document.documentElement;
+  const now = new Date();
+  const month = now.getMonth();
+  const root = document.documentElement;
 
-    if (month >= 2 && month <= 4) {
-      root.style.setProperty('--accent', '#4b6b36');
-      root.style.setProperty('--hover-bg', '#e7f1e5');
-    } else if (month >= 5 && month <= 7) {
-      root.style.setProperty('--accent', '#b65a2b'); // burnt orange
-      root.style.setProperty('--hover-bg', '#fbeadd'); // warm peach-beige
-    } else if (month >= 8 && month <= 10) {
-      root.style.setProperty('--accent', '#6a4f3b');
-      root.style.setProperty('--hover-bg', '#f0e7da');
-    } else {
-      root.style.setProperty('--accent', '#3b3f6a');
-      root.style.setProperty('--hover-bg', '#e6e9f0');
-    }
+  // Your accent/hover logic...
+  if (month >= 2 && month <= 4) { // Spring
+    root.style.setProperty('--accent', '#4b6b36');
+    root.style.setProperty('--hover-bg', '#e7f1e5');
+  } else if (month >= 5 && month <= 7) { // Summer
+    root.style.setProperty('--accent', '#b65a2b');
+    root.style.setProperty('--hover-bg', '#fbeadd');
+  } else if (month >= 8 && month <= 10) { // Fall
+    root.style.setProperty('--accent', '#6a4f3b');
+    root.style.setProperty('--hover-bg', '#f0e7da');
+  } else { // Winter
+    root.style.setProperty('--accent', '#3b3f6a');
+    root.style.setProperty('--hover-bg', '#e6e9f0');
+  }
 
     const seasons = [
       'winter', 'winter', 'spring', 'spring', 'spring',
@@ -291,7 +326,7 @@
   <h1>Andrew Mitchell Hoyt</h1>
   
   <nav>
-    <a href="#in-brief">in brief</a>
+    <a href="#in-brief">about</a>
     <a href="#writing">writing</a>
     <a href="#speaking">speaking</a>
     <a href="#cv">cv</a>
@@ -315,8 +350,6 @@
   -->
 
   <section id="in-brief">
-    <h2>in brief</h2>
-
     <p>
       I am a PhD candidate in the history of science at Princeton University. My research interests span the history of the life and social sciences, environmental and political history, and North American Indigenous history, but revolve around a guiding question: how have ideas about natural order and governance influenced one another since the mid-twentieth century? 
     </p>
@@ -329,7 +362,11 @@
   </section>
 
    <section id="writing">
-    <h2>writing</h2>
+
+   <div class="section-heading">
+   <span class="section-rule writing"></span>
+   <h2>writing</h2>
+   </div>
 
     <div class="publication">
       <a class="subtle-link" href="files/restoration.pdf" target="_blank">
@@ -368,7 +405,11 @@
   </section>
     
   <section id="speaking">
-    <h2>speaking</h2>
+
+  <div class="section-heading">
+  <span class="section-rule speaking"></span>
+  <h2>speaking</h2>
+  </div>
 
     <div class="publication">
       <strong>Conservation in the Corn State: Agribusiness, Ecosystem Services, and the Transformation of Iowa Public Land Management, 1950–1990.</strong><br/>
@@ -412,7 +453,11 @@
   </section>
     
   <section id="cv">
+
+  <div class="section-heading">
+    <span class="section-rule cv"></span>
     <h2>cv</h2>
+  </div>
     <p>
       See the complete record
       <a href="files/AMHoyt_CV.pdf" class="subtle-link" target="_blank">here</a>.
@@ -439,11 +484,11 @@
     </details>
 
     <details>
-      <summary>accolades</summary>
+      <summary>awards & honors</summary>
       <ul>
         <li>Passed General Examinations with Distinction, Princeton University (May 2025)</li>
-        <li>Environmental History Fellow, American Society for Environmental History (2024–2025)</li>
-        <li>Graduate Student Essay Prize, American Society for Environmental History (April 2024)</li>
+        <li>Environmental History Fellow, American Society for Environmental History (2025–2026)</li>
+        <li>Graduate Student Essay Prize, American Society for Environmental History (April 2025)</li>
         <li>President’s Medal, Trent University (June 2024)</li>
         <li>Ontario Graduate Scholarship, Trent University (2022–2023)</li>
         <li>Katherine S. McCarter Graduate Student Policy Award, Ecological Society of America (February 2022)</li>
