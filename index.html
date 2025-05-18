@@ -177,29 +177,35 @@
       }
 
       details summary {
-        font-weight: 600;
-        font-size: 1.08em;
-        cursor: pointer;
-        outline: none;
-        transition: color 0.25s;
-        display: flex;
-        align-items: center;
+  	font-weight: 600;
+  	font-size: 1.08em;
+  	cursor: pointer;
+  	outline: none;
+  	transition: color 0.25s;
+  	display: flex;
+  	align-items: center;
+  	list-style: none;
       }
 
-      details[open] summary {
-        color: #2f2f2f;
+      /* Remove all default markers/arrows */
+      details summary::-webkit-details-marker {
+  	display: none;
+      }
+	    
+      details summary::marker {
+  	display: none;
       }
 
       details summary::before {
-        content: "›";
-        display: inline-block;
-        margin-right: 0.45em;
-        transition: transform 0.25s;
-        font-size: 1em;
+  	content: "›";
+  	display: inline-block;
+  	margin-right: 0.45em;
+  	transition: transform 0.25s;
+  	font-size: 1em;
       }
 
       details[open] summary::before {
-        transform: rotate(90deg);
+  	transform: rotate(90deg);
       }
 
       hr {
