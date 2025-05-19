@@ -214,44 +214,41 @@
   			display: flex;
   			align-items: center;
   			list-style: none;
-    	}
-
-      /* Remove all default markers/arrows */
-      details summary::-webkit-details-marker {
+		}
+		
+		/* Remove all default markers/arrows */
+		details summary::-webkit-details-marker {
+			display: none;
+		}
+		details summary::marker {
   			display: none;
-      }
-	    
-      details summary::marker {
-  			display: none;
-      }
-
-      details summary::before {
+		}
+		
+		details summary::before {
   			content: "›";
   			display: inline-block;
   			margin-right: 0.45em;
   			transition: transform 0.25s;
   			font-size: 1em;
-      }
-
-      details[open] summary::before {
+		}
+		details[open] summary::before {
   			transform: rotate(90deg);
-      }
-
-      hr {
-        margin-top: 0.3em;   /* Tighter above */
-        margin-bottom: 0.3em;/* Tighter below */
-      }
-  
-    </style>
-
-    <!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->   
-    <script>
-      data-goatcounter="https://amhoyt.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js">
-		</script>
+		}
 		
-		<!-- Javascript block -->   
-		<script>
+		hr {
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+		}
+	</style>
+	
+	<!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
+	<script>
+		data-goatcounter="https://amhoyt.goatcounter.com/count"
+			async src="//gc.zgo.at/count.js">
+	</script>
+	
+	<!-- Javascript block -->
+	<script>
 			window.addEventListener('DOMContentLoaded', () => {
 				const now = new Date();
 				const month = now.getMonth();
@@ -367,7 +364,7 @@
   	<h1>Andrew Mitchell Hoyt</h1>
   
   	<nav>
-    	<a href="#in-brief">about</a>
+    	<a href="#about">about</a>
     	<a href="#writing">writing</a>
     	<a href="#speaking">speaking</a>
     	<a href="#cv">cv</a>
