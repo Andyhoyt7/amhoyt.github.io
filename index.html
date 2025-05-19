@@ -124,12 +124,18 @@
 			padding-bottom: 1px;
 			transition: color 0.3s, border-bottom-color 0.3s;
 		}
+
+		/* Esnures that link color does not change after being visited. */
 		a:visited {
-			color: #444;
+			color: inherit;
 		}
+
+		/* Formats how links change when the cursor hovers over them */
 		a:hover {
 			color: var(--accent);
 			border-bottom: 1.2px dotted var(--accent);
+			background-color: var(--hover-bg);
+			transition: color 0.3s, border-bottom-color 0.3s, background-color 0.3s;
 		}
 
 		/* Nav bar formatting */
@@ -188,23 +194,23 @@
 			z-index: 1;
 			animation: drift 60s linear infinite;
 		}
-
-      @keyframes drift {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(100px); }
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      details {
-        margin-bottom: 1.2em; /* Modest, even spacing */
-      }
-
-      details summary {
-  			font-weight: 600;
-  			font-size: 1.08em;
+		
+		@keyframes drift {
+			0% { transform: translateY(0); }
+			100% { transform: translateY(100px); }
+		}
+		
+		.hidden {
+			display: none;
+		}
+		
+		details {
+			margin-bottom: 1.2em;
+		}
+		
+		details summary {
+			font-weight: 600;
+			font-size: 1.08em;
   			cursor: pointer;
   			outline: none;
   			transition: color 0.25s;
