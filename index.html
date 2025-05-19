@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-  	<!-- Title and favicon for search --> 
-    <title>Andrew Hoyt</title>
-    <!-- Static favicon for Google and page links -->
-    <link rel="icon" type="image/svg" href="img/favicon.svg">
-    <!-- Dynamic favicon for tabs (seasonal swapper) -->
-    <link id="dynamic-favicon" rel="icon" type="image/png" href="img/summer.png">
+    <!-- Primary metadata -->
     <meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1"/>
   	<meta name="description" content="Ecology, environmental governance, and the politics of nature."/>
+
+    <!-- OpenGraph metadata -->
   	<meta property="og:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
   	<meta property="og:description" content="Ecology, environmental governance, and the politics of nature." />
   	<meta property="og:type" content="website" />
   	<meta property="og:url" content="https://www.amhoyt.com/" />
   	<meta property="og:image" content="https://www.amhoyt.com/img/summer.png" />
+
+    <!-- Twitter metadata -->
 		<meta name="twitter:card" content="https://www.amhoyt.com/img/summer.png" />
 		<meta name="twitter:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
 		<meta name="twitter:description" content="Ecology, environmental governance, and the politics of nature." />
 		<meta name="twitter:image" content="https://www.amhoyt.com/img/summer.png" />
 
+    <!-- Title and favicon for search --> 
+    <title>Andrew Hoyt</title>
+    <link rel="icon" type="image/svg" href="img/favicon.svg">
+    <!-- Sets up dynamic favicon for tabs, which is javascrip below updates -->
+    <link id="dynamic-favicon" rel="icon" type="image/png" href="img/summer.png">
+    
 		<!-- Schema.org JSON-LD structured data -->
 		<script type="application/ld+json"> {
 			"@context": "https://schema.org",
@@ -29,11 +34,13 @@
     	"url": "https://amhoyt.com"
   	}
   	</script>
-		
+
+    <!-- Style sheet for website. Defines color palette, seasonal logics, and link classes -->
     <style>
 			/* Fonts */
     	@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
 
+      /* Color Palette */
       :root {
       	--accent: #6a4f3b;
         --hover-bg: #eae6da;
@@ -43,8 +50,10 @@
         --ink-black: #2f2f2f;
         --candlelight-gold: #eed17c;
         --dacha-blue: #a3b9c9;
+        --nav-col: rgba(187, 183, 175, 0.4);
       }
 
+      /* Defines fonts and faint background image */
       body {
         font-family: 'EB Garamond', serif;
         background-color: #f9f8f4;
@@ -53,7 +62,7 @@
         max-width: 720px;
         line-height: 1.7;
         padding: 0 1em;
-        background-image: radial-gradient(rgba(0,0,0,0.015) 1px, transparent 1px);
+        background-image: radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
         background-size: 10px 10px;
       }
 
@@ -111,7 +120,7 @@
         z-index: 100;
         padding-top: 0.25em;   
         padding-bottom: 0.25em;
-				border-bottom: 2.5px solid rgba(187, 183, 175, 0.4); /* adjust opacity here */
+				border-bottom: 2.5px solid var(--nav-col); /* adjust opacity here */
       }
 
       nav a {
