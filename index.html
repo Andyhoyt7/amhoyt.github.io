@@ -1,431 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- Primary metadata -->
-	<meta charset="utf-8" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-  	<meta name="description" content="Ecology, environmental governance, and the politics of nature."/>
-
-	<!-- OpenGraph metadata -->
-	<meta property="og:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
-  	<meta property="og:description" content="Ecology, environmental governance, and the politics of nature." />
-  	<meta property="og:type" content="website" />
-  	<meta property="og:url" content="https://www.amhoyt.com/" />
-  	<meta property="og:image" content="https://www.amhoyt.com/img/summer.png" />
+	<head>
+		<!-- Primary metadata -->
+		<meta charset="utf-8" />
+	  	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  	<meta name="description" content="Ecology, environmental governance, and the politics of nature."/>
 	
-	<!-- Twitter metadata -->
-	<meta name="twitter:card" content="https://www.amhoyt.com/img/summer.png" />
-	<meta name="twitter:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
-	<meta name="twitter:description" content="Ecology, environmental governance, and the politics of nature." />
-	<meta name="twitter:image" content="https://www.amhoyt.com/img/summer.png" />
-
-	<!-- Title and favicon for search --> 
-	<title>Andrew Hoyt</title>
-	<link rel="icon" type="image/svg" href="img/favicon.svg">
+		<!-- OpenGraph metadata -->
+		<meta property="og:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
+	  	<meta property="og:description" content="Ecology, environmental governance, and the politics of nature." />
+	  	<meta property="og:type" content="website" />
+	  	<meta property="og:url" content="https://www.amhoyt.com/" />
+	  	<meta property="og:image" content="https://www.amhoyt.com/img/summer.png" />
+		
+		<!-- Twitter metadata -->
+		<meta name="twitter:card" content="https://www.amhoyt.com/img/summer.png" />
+		<meta name="twitter:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
+		<meta name="twitter:description" content="Ecology, environmental governance, and the politics of nature." />
+		<meta name="twitter:image" content="https://www.amhoyt.com/img/summer.png" />
 	
-	<!-- Sets up dynamic favicon for tabs, which is javascrip below updates -->
-	<link id="dynamic-favicon" rel="icon" type="image/png" href="img/summer.png">
-
-	<!-- Schema.org JSON-LD structured data -->
-	<script type="application/ld+json"> {
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Andrew Hoyt",
-		"alternateName": ["Andy Hoyt", "Andrew M. Hoyt", "Andrew Mitchell Hoyt"]
-		"url": "https://amhoyt.com"
-		}
-	</script>
+		<!-- Title and favicon for search --> 
+		<title>Andrew Hoyt</title>
+		<link rel="icon" type="image/svg" href="img/favicon.svg">
+		
+		<!-- Sets up dynamic favicon for tabs, which is javascrip below updates -->
+		<link id="dynamic-favicon" rel="icon" type="image/png" href="img/summer.png">
 	
-	<!-- Style sheet for website. Defines color palette, seasonal logics, and link classes -->
-	<style>
+		<!-- Schema.org JSON-LD structured data -->
+		<script type="application/ld+json"> {
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Andrew Hoyt",
+			"alternateName": ["Andy Hoyt", "Andrew M. Hoyt", "Andrew Mitchell Hoyt"]
+			"url": "https://amhoyt.com"
+			}
+		</script>
+		
+		<!-- Style sheet for website. Defines color palette, seasonal logics, and link classes -->
+		<style>
+		
+			/* Fonts */
+	    		@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
+			
+			/* Color Palette */
+			:root {
+				--accent: #6a4f3b;
+				--hover-bg: #eae6da;
+				--steppe-green: #6d826a;
+				--birch-bark: #ede6da;
+				--tea-brown: #8d7351;
+				--ink-black: #2f2f2f;
+				--candlelight-gold: #eed17c;
+				--dacha-blue: #a3b9c9;
+				--nav-col: rgba(187, 183, 175, 0.4);
+			}
+			
+			/* Defines fonts and faint background image */
+			body {
+				font-family: 'EB Garamond', serif;
+				background-color: #f9f8f4;
+				color: #2f2f2f;
+				margin: 2em auto;
+				max-width: 720px;
+				line-height: 1.7;
+				padding: 0 1em;
+				background-image: radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+				background-size: 10px 10px;
+			}
 	
-		/* Fonts */
-    		@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
-		
-		/* Color Palette */
-		:root {
-			--accent: #6a4f3b;
-			--hover-bg: #eae6da;
-			--steppe-green: #6d826a;
-			--birch-bark: #ede6da;
-			--tea-brown: #8d7351;
-			--ink-black: #2f2f2f;
-			--candlelight-gold: #eed17c;
-			--dacha-blue: #a3b9c9;
-			--nav-col: rgba(187, 183, 175, 0.4);
-		}
-		
-		/* Defines fonts and faint background image */
-		body {
-			font-family: 'EB Garamond', serif;
-			background-color: #f9f8f4;
-			color: #2f2f2f;
-			margin: 2em auto;
-			max-width: 720px;
-			line-height: 1.7;
-			padding: 0 1em;
-			background-image: radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
-			background-size: 10px 10px;
-		}
-
-		/* Title font */
-		h1 {
-			font-family: 'Courier Prime', monospace;
-			font-weight: 300;
-			font-size: 2.2em;
-			margin: 2em 0 0.05em;
-		}
-
-		/* Section heading font*/
-		h2 {
-			font-family: 'Courier Prime', monospace;
-			text-transform: lowercase;
-			margin-top: 2em;
-		}
-
-		/* Colorful lines to the left of section headings */
-		.section-heading {
-			display: flex;
-			align-items: center;
-			margin-bottom: 1.2em;
-		}
-		.section-rule {
-			display: inline-block;
-			height: 3px;
-			border-radius: 1.5px;
-			width: 2.8em;
-			margin-right: 1.1em;
-			margin-bottom: 0.1em;
-			box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-		}
-		.section-rule.writing {
-			background: var(--candlelight-gold);
-		}
-		.section-rule.speaking {
-			background: var(--dacha-blue);
-		}
-		.section-rule.cv {
-			background: var(--tea-brown);
-		}
-		.section-heading h2 {
-			margin: 0;
-			padding: 0;
-			font-family: 'Courier Prime', monospace;
-  	 		text-transform: lowercase;
-  			font-size: 1.5em;
-  			font-weight: 400;
-		}
-
-		/* Global link styling. (Formerly a different "subtle link" class) */ 
-		a {
-			color: inherit;
-			text-decoration: none;
-			border-bottom: 1px dotted var(--accent);
-			padding-bottom: 1px;
-			transition: color 0.3s, border-bottom-color 0.3s;
-		}
-
-		/* Esnures that link color does not change after being visited. */
-		a:visited {
-			color: inherit;
-		}
-
-		/* Formats how links change when the cursor hovers over them */
-		a:hover {
-			color: var(--accent);
-			border-bottom: 1.2px dotted var(--accent);
-			background-color: var(--hover-bg);
-			transition: color 0.3s, border-bottom-color 0.3s, background-color 0.3s;
-		}
-
-		/* Nav bar formatting */
-		nav {
-			position: sticky;
-			top: 0;
-			background: rgba(249, 248, 244, 0.92);
-			z-index: 100;
-			padding-top: 0.25em;   
-			padding-bottom: 0.25em;
-			border-bottom: 2.5px solid var(--nav-col);
-		}
-
-		/* Special link rules for nav bar. This just makes sure they're seperated appropriately. */
-		nav a {
-			margin-right: 1em;
-		}
-
-		/* For potential footnote feature. Not yet implemented. */
-		.note {
-			font-size: 0.9em;
-			font-style: italic;
-			color: #6a625a;
-		}
-
-		/* For routing to sections */
-		section {
-			margin-bottom: 3em;
-			scroll-margin-top: 100px;
-		}
-
-		/* Spacing for lists */
-		ul {
-			padding-left: 1.2em;
-		}
-
-		/* Defines "featured item" class for publications, presentations, and other major works */
-		.featured-item {
-			margin-bottom: 1em;
-		}
-		
-		/* Styles the background? Not sure */
-		body::after {
-			content: '';
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			pointer-events: none;
-			background: linear-gradient(to bottom, transparent, rgba(220, 210, 200, 0.05));
-			mix-blend-mode: multiply;
-			z-index: 1;
-			animation: drift 60s linear infinite;
-		}
-		
-		@keyframes drift {
-			0% { transform: translateY(0); }
-			100% { transform: translateY(100px); }
-		}
-		
-		.hidden {
-			display: none;
-		}
-		
-		details {
-			margin-bottom: 1.2em;
-		}
-		
-		details summary {
-			font-weight: 600;
-			font-size: 1.08em;
-  			cursor: pointer;
-  			outline: none;
-  			transition: color 0.25s;
-  			display: flex;
-  			align-items: center;
-  			list-style: none;
-		}
-		
-		/* Remove all default markers/arrows */
-		details summary::-webkit-details-marker {
-			display: none;
-		}
-		details summary::marker {
-  			display: none;
-		}
-		
-		details summary::before {
-  			content: "›";
-  			display: inline-block;
-  			margin-right: 0.45em;
-  			transition: transform 0.25s;
-  			font-size: 1em;
-		}
-		details[open] summary::before {
-  			transform: rotate(90deg);
-		}
-		
-		hr {
-			margin-top: 0.3em;
-			margin-bottom: 0.3em;
-		}
-	</style>
+			/* Title font */
+			h1 {
+				font-family: 'Courier Prime', monospace;
+				font-weight: 300;
+				font-size: 2.2em;
+				margin: 2em 0 0.05em;
+			}
 	
-	<!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
-	<script>
-		data-goatcounter="https://amhoyt.goatcounter.com/count"
-			async src="//gc.zgo.at/count.js">
-	</script>
+			/* Section heading font*/
+			h2 {
+				font-family: 'Courier Prime', monospace;
+				text-transform: lowercase;
+				margin-top: 2em;
+			}
 	
-	<!-- Javascript block -->
-	<script>
+			/* Colorful lines to the left of section headings */
+			.section-heading {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1.2em;
+			}
+			.section-rule {
+				display: inline-block;
+				height: 3px;
+				border-radius: 1.5px;
+				width: 2.8em;
+				margin-right: 1.1em;
+				margin-bottom: 0.1em;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+			}
+			.section-rule.writing {
+				background: var(--candlelight-gold);
+			}
+			.section-rule.speaking {
+				background: var(--dacha-blue);
+			}
+			.section-rule.cv {
+				background: var(--tea-brown);
+			}
+			.section-heading h2 {
+				margin: 0;
+				padding: 0;
+				font-family: 'Courier Prime', monospace;
+	  	 		text-transform: lowercase;
+	  			font-size: 1.5em;
+	  			font-weight: 400;
+			}
+	
+			/* Global link styling. (Formerly a different "subtle link" class) */ 
+			a {
+				color: inherit;
+				text-decoration: none;
+				border-bottom: 1px dotted var(--accent);
+				padding-bottom: 1px;
+				transition: color 0.3s, border-bottom-color 0.3s;
+			}
+	
+			/* Esnures that link color does not change after being visited. */
+			a:visited {
+				color: inherit;
+			}
+	
+			/* Formats how links change when the cursor hovers over them */
+			a:hover {
+				color: var(--accent);
+				border-bottom: 1.2px dotted var(--accent);
+				background-color: var(--hover-bg);
+				transition: color 0.3s, border-bottom-color 0.3s, background-color 0.3s;
+			}
+	
+			/* Nav bar formatting */
+			nav {
+				position: sticky;
+				top: 0;
+				background: rgba(249, 248, 244, 0.92);
+				z-index: 100;
+				padding-top: 0.25em;   
+				padding-bottom: 0.25em;
+				border-bottom: 2.5px solid var(--nav-col);
+			}
+	
+			/* Special link rules for nav bar. This just makes sure they're seperated appropriately. */
+			nav a {
+				margin-right: 1em;
+			}
+	
+			/* For potential footnote feature. Not yet implemented. */
+			.note {
+				font-size: 0.9em;
+				font-style: italic;
+				color: #6a625a;
+			}
+	
+			/* For routing to sections */
+			section {
+				margin-bottom: 3em;
+				scroll-margin-top: 100px;
+			}
+	
+			/* Spacing for lists */
+			ul {
+				padding-left: 1.2em;
+			}
+	
+			/* Defines "featured item" class for publications, presentations, and other major works */
+			.featured-item {
+				margin-bottom: 1em;
+			}
+			
+			/* Adds subtle beige background that sweeps across the page over 60 seconds */
+			body::after {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				background: linear-gradient(to bottom, transparent, rgba(220, 210, 200, 0.05));
+				mix-blend-mode: multiply;
+				z-index: 1;
+				animation: drift 60s linear infinite;
+			}
+	
+			/* Animation for linear gradient */
+			@keyframes drift {
+				0% { transform: translateY(0); }
+				100% { transform: translateY(100px); }
+			}
+	
+			/* Class that hides elements. Used for themes map. */
+			.hidden {
+				display: none;
+			}
+	
+			/* Sets spacing for detail blocks. */
+			details {
+				margin-bottom: 1.2em;
+			}
+	
+			/* Formatting for details blocks in CV section */
+			details summary {
+				font-weight: 600;
+				font-size: 1.08em;
+	  			cursor: pointer;
+	  			outline: none;
+	  			transition: color 0.25s;
+	  			display: flex;
+	  			align-items: center;
+	  			list-style: none;
+			}
+			
+			/* Remove all default markers/arrows. These were appearing in firefox on mobile. */
+			details summary::-webkit-details-marker {
+				display: none;
+			}
+			details summary::marker {
+	  			display: none;
+			}
+			
+			details summary::before {
+	  			content: "›";
+	  			display: inline-block;
+	  			margin-right: 0.45em;
+	  			transition: transform 0.25s;
+	  			font-size: 1em;
+			}
+			details[open] summary::before {
+	  			transform: rotate(90deg);
+			}
+			
+			hr {
+				margin-top: 0.3em;
+				margin-bottom: 0.3em;
+			}
+		</style>
+		
+		<!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
+		<script>
+			data-goatcounter="https://amhoyt.goatcounter.com/count"
+				async src="//gc.zgo.at/count.js">
+		</script>
+		
+		<!-- Javascript block -->
+		<script>
+			// Defines seasonal accents. Starts with a content loader. 
 			window.addEventListener('DOMContentLoaded', () => {
 				const now = new Date();
 				const month = now.getMonth();
 				const root = document.documentElement;
-				// Your accent/hover logic...
-  			if (month >= 2 && month <= 4) { // Spring
-    			root.style.setProperty('--accent', '#4b6b36');
-    			root.style.setProperty('--hover-bg', '#e7f1e5');
-  			}
-				else if (month >= 5 && month <= 7) { // Summer
-    			root.style.setProperty('--accent', '#b65a2b');
-    			root.style.setProperty('--hover-bg', '#fbeadd');
- 				}
-			  else if (month >= 8 && month <= 10) { // Fall
-    			root.style.setProperty('--accent', '#6a4f3b');
-    			root.style.setProperty('--hover-bg', '#f0e7da');
-  			}
-				else { // Winter
-    			root.style.setProperty('--accent', '#3b3f6a');
-    			root.style.setProperty('--hover-bg', '#e6e9f0');
-  			}
+	
+				// Spring accents
+	  			if (month >= 2 && month <= 4) {
+					root.style.setProperty('--accent', '#4b6b36');
+					root.style.setProperty('--hover-bg', '#e7f1e5');
+	  			}
+				// Summer accents
+				else if (month >= 5 && month <= 7) {
+					root.style.setProperty('--accent', '#b65a2b');
+					root.style.setProperty('--hover-bg', '#fbeadd');
+				}
+	
+				// Fall accents
+				else if (month >= 8 && month <= 10) {
+					root.style.setProperty('--accent', '#6a4f3b');
+					root.style.setProperty('--hover-bg', '#f0e7da');
+				}
+	
+				// Winter accents
+				else {
+					root.style.setProperty('--accent', '#3b3f6a');
+					root.style.setProperty('--hover-bg', '#e6e9f0');
+				}
+				
+				// Labels each month with its corresponding seasonal identity
 				const seasons = [
-      		'winter', 'winter', 'spring', 'spring', 'spring',
-      		'summer', 'summer', 'summer',
-      		'fall', 'fall', 'fall',
-      		'winter'
-    		];
-    	
-			const season = seasons[month];
-			const favicon = document.getElementById('dynamic-favicon');
-			const seasonalFavicons = {
-        spring: "img/spring.png",
-        summer: "img/summer.png",
-        fall: "img/fall.png",
-        winter: "img/winter.png"
-    	};
-
-    	if (favicon && seasonalFavicons[season]) {
-      	favicon.href = seasonalFavicons[season];
-    	}
-    
-    	const quotesBySeason = {
-      	spring: [
-        	`“Spring is the time of plans and projects.” — Tolstoy`,
-        	`“The sun was warm but the wind was chill. / You know how it is with an April day.” — Robert Frost`,
-        	`“Everything was blooming: the grass, the trees, and something in the soul.” — Tolstoy`,
-        	`“April is the cruelest month, breeding / Lilacs out of the dead land” — T. S. Eliot`
-      	],
-      	
-				/*
-        	Sources:
-        	- Tolstoy, Anna Karenina, Part 1, Ch. 1
-        	- Frost, “Two Tramps in Mud Time” (1934)
-        	- Tolstoy, Resurrection
-        	- T. S. Eliot, The Waste Land (1922)
-      	*/
-
-      	summer: [
-        	`“It was the season of excess, of bloom and blur and burn.” — bell hooks`,
-        	`“In the heat of the summer sun, there was something false and oppressive in everything.” — Tolstoy`
-      	],
-      	/*
-        	Sources:
-        	- bell hooks, Belonging: A Culture of Place (2009)
-        	- Tolstoy, Anna Karenina (Book 2)
-      	*/
-
-      	fall: [
-        	`“The tints of autumn... a melancholy and graceful robe.” — Hawthorne`,
-        	`“Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long...” — Rilke`,
-        	`“To be rooted is perhaps the most important and least recognized need of the human soul.” — Simone Weil`
-      	],
-      	/*
-        	Sources:
-        	- Hawthorne, “The Old Manse” (1846)
-        	- Rilke, “Herbsttag” / “Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
-        	- Weil, The Need for Roots (1949)
-      	*/
-
-      	winter: [
-        	`“In seed time learn, in harvest teach, in winter enjoy.” — William Blake`,
-        	`“A beautiful thing, though always a source of sadness, is never sad in itself.” — Simone Weil`,
-        	`“There’s a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes.” — Emily Dickinson`,
-        	`“Even silence is an answer.” — Wendell Berry`
-      	]
-      	/*
-        	Sources:
-        	- Blake, The Marriage of Heaven and Hell (1790–93)
-        	- Weil, Gravity and Grace (1947)
-        	- Dickinson, “There’s a certain Slant of light” (Poem 258, ca. 1861)
-        	- Berry, from “Healing” in *What Are People For?* (1990)
-      	*/
-    	};
-
-    	const seasonalQuote = document.getElementById('seasonal-quote');
-    	if (seasonalQuote && quotesBySeason[season]) {
-      	const quotes = quotesBySeason[season];
-      	const quote = quotes[Math.floor(Math.random() * quotes.length)];
-      	seasonalQuote.textContent = quote;
-    	}
-
-    	const seasonLabel = document.getElementById('season-label');
-    	if (seasonLabel) {
-      	seasonLabel.textContent = season + ' ' + now.getFullYear();
-    	}
-  	});
+					'winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'fall', 'fall', 'fall', 'winter'
+				];
+				const season = seasons[month];
+	
+				// Sets seasonal favicon
+				const favicon = document.getElementById('dynamic-favicon');
+				const seasonalFavicons = {
+					spring: "img/spring.png",
+					summer: "img/summer.png",
+					fall: "img/fall.png",
+					winter: "img/winter.png"
+				};
+	
+				// Checks for season and appoints proper favicon
+				if (favicon && seasonalFavicons[season]) {
+					favicon.href = seasonalFavicons[season];
+				}
+	
+				// Defines seasonal quotes
+				const quotesBySeason = {
+					spring: [
+						`“Spring is the time of plans and projects.” — Tolstoy`, // Anna Karenina, Part 1, Ch. 1
+						`“The sun was warm but the wind was chill. / You know how it is with an April day.” — Robert Frost`, // “Two Tramps in Mud Time” (1934)
+						`“Everything was blooming: the grass, the trees, and something in the soul.” — Tolstoy`, // Resurrection
+						`“April is the cruelest month, breeding / Lilacs out of the dead land” — T. S. Eliot` // The Waste Land (1922)
+					],
+					summer: [
+						`“It was the season of excess, of bloom and blur and burn.” — bell hooks`, // Belonging: A Culture of Place (2009)
+						`“In the heat of the summer sun, there was something false and oppressive in everything.” — Tolstoy` // Anna Karenina (Book 2)
+					],
+					fall: [
+						`“The tints of autumn... a melancholy and graceful robe.” — Hawthorne`, // “The Old Manse” (1846)
+						`“Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long...” — Rilke`, // “Herbsttag” / “Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
+						`“To be rooted is perhaps the most important and least recognized need of the human soul.” — Simone Weil` // The Need for Roots (1949)
+					],
+					winter: [
+						`“In seed time learn, in harvest teach, in winter enjoy.” — William Blake`, //  The Marriage of Heaven and Hell (1790–93)
+						`“A beautiful thing, though always a source of sadness, is never sad in itself.” — Simone Weil`, // Gravity and Grace (1947)
+						`“There’s a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes.” — Emily Dickinson`, // “There’s a certain Slant of light” (Poem 258, ca. 1861)
+						`“Even silence is an answer.” — Wendell Berry` // “Healing” in *What Are People For?* (1990)
+					]
+				};
+	
+				// Randomly appoints quote for season
+				const seasonalQuote = document.getElementById('seasonal-quote');
+				if (seasonalQuote && quotesBySeason[season]) {
+					const quotes = quotesBySeason[season];
+					const quote = quotes[Math.floor(Math.random() * quotes.length)];
+					seasonalQuote.textContent = quote;
+				}
+				const seasonLabel = document.getElementById('season-label');
+				if (seasonLabel) {
+					seasonLabel.textContent = season + ' ' + now.getFullYear();
+				}
+			});
 		</script>
-      
 	</head>
 
-  <body>
-  
-  	<h1>Andrew Mitchell Hoyt</h1>
-  
-  	<nav>
-    	<a href="#about">about</a>
-    	<a href="#writing">writing</a>
-    	<a href="#speaking">speaking</a>
-    	<a href="#cv">cv</a>
-  	</nav>
-  
-	  <!--
-	  <button onclick="document.getElementById('theme-map').classList.toggle('hidden')"
-	          style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">
-	    themes
-	  </button>
-	
-	  <aside class="hidden" id="theme-map"
-	         style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;">
-	    <div style="margin-bottom: 0.5em; font-weight: bold;">themes</div>
-	    <div><a href="#cv" style="text-decoration: none; color: var(--accent);" title="The management of things">governance</a></div>
-	    <div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Things that do not resolve cleanly">uncertainty</a></div>
-	    <div><a href="#publications" style="text-decoration: none; color: var(--accent);" title="Repairing what was broken by development or conquest">restoration</a></div>
-	    <div><a href="#about" style="text-decoration: none; color: var(--accent);" title="The study of environments, organisms, and their interdependence">ecology</a></div>
-	    <div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">system</a></div>
-	  </aside>
-	  -->
+	<!-- Text of the website -->
+	<body>
 
-	  <section id="in-brief">
-	    <p>
-	      I am a PhD candidate in the history of science at Princeton University. My research revolves around a central concern: how have ideas about natural order and governance influenced one another since the mid-twentieth century? Answering this question has led me through the history of the life and social sciences, environmental and political history, and North American Indigenous history. 
-	    </p>
-	    <p>
-	      For my M.A. thesis, I considered this question by tracing the rise of ecological restoration as a concept, research agenda, and set of management interventions in the Midwestern United States. The project focused especially on the region's characteristic grasses — prairie tallgrass, corn, and wild rice — and the conflicting science and politics in which they have been emboroiled since the early twentieth century. More recently, I’ve been writing about Ojibwe relational restoration as a form of world-making and the political and ecological ideals behind changing public land management regimes in the Corn Belt.
-	    </p>  
-	    <p>
-	      Before starting at Princeton, I graduated from Carleton College with a B.A. in History, a minor in Medieval and Renaissance Studies, and a background in ecological research. I went on to work as an energy analyst and climate policy advocate in Minneapolis for several years before completing an M.A. in History at Trent University in Ontario.
-	    </p>
-	  </section>
-	
-	   <section id="writing">
-	
-	   <div class="section-heading">
-	   <span class="section-rule writing"></span>
-	   <h2>writing</h2>
-	   </div>
-	
-	    <div class="featured-item">
-	      <a href="files/restoration.pdf" target="_blank">
-	        <strong><em>Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950.</em></strong>
-	      </a><br/>
-	      M.A. Thesis. Trent University, 2023.
-	    </div>
-	
-	    <div class="featured-item">
-	      <a href="https://defendingthearcticrefuge.com/" target="_blank">
-	        <strong>Public History Companion Website for Finis Dunaway’s <em>Defending the Arctic Refuge </em>.</strong>
-	      </a><br/>
-	      With Finis Dunaway. Fall 2022.
-	    </div>
-	
-	    <div class="featured-item">
-	      <a href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank">
-	        <strong>“What Minnesota’s Mineral Gaze Overlooks.”</strong>
-	      </a><br/>
-	      Edge Effects Digital Magazine, July 2022.
-	    </div>
+		<!-- Title -->
+  		<h1>Andrew Mitchell Hoyt</h1>
+
+		<!-- Nav bar -->
+  		<nav>
+			<a href="#about">about</a>
+			<a href="#writing">writing</a>
+			<a href="#speaking">speaking</a>
+			<a href="#cv">cv</a>
+		</nav>
+		
+		<!-- Thematic menu that highlights items according to topics. Not implemented at the moment.
+		<button onclick="document.getElementById('theme-map').classList.toggle('hidden')"
+			style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;"> 
+			themes
+		</button>
+		
+		<aside class="hidden" id="theme-map"
+			style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;">
+		<div style="margin-bottom: 0.5em; font-weight: bold;">themes</div>
+		<div><a href="#cv" style="text-decoration: none; color: var(--accent);" title="The management of things">governance</a></div>
+		<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Things that do not resolve cleanly">uncertainty</a></div>
+		<div><a href="#publications" style="text-decoration: none; color: var(--accent);" title="Repairing what was broken by development or conquest">restoration</a></div>
+		<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="The study of environments, organisms, and their interdependence">ecology</a></div>
+		<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">system</a></div>
+		</aside> 
+		-->
+		
+		<!-- first "about" section. Just a few paragraphs of text. -->
+		<section id="about">
+			<p>
+				I am a PhD candidate in the history of science at Princeton University. My research revolves around a central concern: how have ideas about natural order and governance influenced one another since the mid-twentieth century? Answering this question has led me through the history of the life and social sciences, environmental and political history, and North American Indigenous history. 
+			</p>
+			<p>
+				In my M.A. thesis, I considered this question by tracing the rise of ecological restoration as a concept, research agenda, and set of management interventions in the Midwestern United States. The project focused especially on the region's characteristic grasses — prairie tallgrass, corn, and wild rice — and the conflicting science and politics in which they have been emboroiled since the early twentieth century. More recently, I’ve been writing about Ojibwe relational restoration as a form of world-making and the political and ecological ideals behind changing public land management regimes in the Corn Belt.
+			</p>  
+			<p>
+				Before starting at Princeton, I graduated from Carleton College with a B.A. in History, a minor in Medieval and Renaissance Studies, and a background in ecological research. I went on to work as an energy analyst and climate policy advocate in Minneapolis for several years before completing an M.A. in History at Trent University in Ontario.
+			</p>
+		</section>
+
+		<!-- Writing section -->
+		<section id="writing">
+
+			<!-- Heading and colorful line -->
+			<div class="section-heading">
+				<span class="section-rule writing"></span>
+				<h2>writing</h2>
+			</div>
+
+			<!-- Individual pieces and links -->
+			<div class="featured-item">
+				<a href="files/restoration.pdf" target="_blank">
+					<strong><em>Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950.</em></strong></a><br/>
+					M.A. Thesis. Trent University, 2023.
+			</div>
+			<div class="featured-item">
+				<a href="https://defendingthearcticrefuge.com/" target="_blank">
+					<strong>Public History Companion Website for Finis Dunaway’s <em>Defending the Arctic Refuge </em>.</strong></a><br/>
+					With Finis Dunaway. Fall 2022.
+			</div>
+			<div class="featured-item">
+				<a href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank"><strong>“What Minnesota’s Mineral Gaze Overlooks.”</strong></a><br/>
+				Edge Effects Digital Magazine, July 2022.
+			</div>
 	
 	    <div class="featured-item">
 	      <a href="files/heat-pump.pdf" target="_blank">
