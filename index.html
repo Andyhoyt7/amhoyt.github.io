@@ -27,7 +27,7 @@
 		<!-- Title and favicon for search --> 
     <title>Andrew Hoyt</title>
     <!-- Static favicon for Google/Search -->
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="icon" type="image/svg" href="img/favicon.svg">
     <!-- Dynamic favicon for tabs (seasonal swapper) -->
     <link id="dynamic-favicon" rel="icon" type="image/png" href="img/summer.png">
 		
@@ -273,10 +273,10 @@
 			const season = seasons[month];
 			const favicon = document.getElementById('dynamic-favicon');
 			const seasonalFavicons = {
-      spring: "img/spring.png",
-      summer: "img/summer.png",
-      fall: "img/fall.png",
-      winter: "img/winter.png"
+        spring: "img/spring.png",
+        summer: "img/summer.png",
+        fall: "img/fall.png",
+        winter: "img/winter.png"
     	};
 
     	if (favicon && seasonalFavicons[season]) {
