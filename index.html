@@ -164,29 +164,30 @@
 			scroll-margin-top: 100px;
 		}
 
+		/* Spacing for lists */
 		ul {
 			padding-left: 1.2em;
 		}
-		
+
+		/* Defines "featured item" class for publications, presentations, and other major works */
 		.featured-item {
 			margin-bottom: 1em;
 		}
 		
-
-
-      body::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background: linear-gradient(to bottom, transparent, rgba(220, 210, 200, 0.05));
-        mix-blend-mode: multiply;
-        z-index: 1;
-        animation: drift 60s linear infinite;
-      }
+		/* Styles the background? Not sure */
+		body::after {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			background: linear-gradient(to bottom, transparent, rgba(220, 210, 200, 0.05));
+			mix-blend-mode: multiply;
+			z-index: 1;
+			animation: drift 60s linear infinite;
+		}
 
       @keyframes drift {
         0% { transform: translateY(0); }
