@@ -76,109 +76,103 @@
 			margin: 2em 0 0.05em;
 		}
 
-		/* Section headings font */
+		/* Section heading font*/
 		h2 {
 			font-family: 'Courier Prime', monospace;
 			text-transform: lowercase;
 			margin-top: 2em;
 		}
-		
+
+		/* Colorful lines to the left of section headings */
 		.section-heading {
 			display: flex;
 			align-items: center;
 			margin-bottom: 1.2em;
 		}
-		
 		.section-rule {
 			display: inline-block;
 			height: 3px;
 			border-radius: 1.5px;
-        width: 2.8em;
-        margin-right: 1.1em;
-        margin-bottom: 0.1em;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      }
-
-      .section-rule.writing  { background: var(--candlelight-gold);
-			}
-			
-      .section-rule.speaking { background: var(--dacha-blue);
-			}
-			
-      .section-rule.cv       { background: var(--tea-brown);
-			}
-			
-      .section-heading h2 {
-      	margin: 0;
-      	padding: 0;
-        font-family: 'Courier Prime', monospace;
+			width: 2.8em;
+			margin-right: 1.1em;
+			margin-bottom: 0.1em;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+		}
+		.section-rule.writing {
+			background: var(--candlelight-gold);
+		}
+		.section-rule.speaking {
+			background: var(--dacha-blue);
+		}
+		.section-rule.cv {
+			background: var(--tea-brown);
+		}
+		.section-heading h2 {
+			margin: 0;
+			padding: 0;
+			font-family: 'Courier Prime', monospace;
   	 		text-transform: lowercase;
   			font-size: 1.5em;
   			font-weight: 400;
-      }
+		}
 
-      nav {
-        position: sticky;
-        top: 0;
-        background: rgba(249, 248, 244, 0.92);
-        z-index: 100;
-        padding-top: 0.25em;   
-        padding-bottom: 0.25em;
-				border-bottom: 2.5px solid var(--nav-col); /* adjust opacity here */
-      }
+		/* Global link styling. (Formerly a different "subtle link" class) */ 
+		a {
+			color: inherit;
+			text-decoration: none;
+			border-bottom: 1px dotted var(--accent);
+			padding-bottom: 1px;
+			transition: color 0.3s, border-bottom-color 0.3s;
+		}
+		a:visited {
+			color: #444;
+		}
+		a:hover {
+			color: var(--accent);
+			border-bottom: 1.2px dotted var(--accent);
+		}
 
-      nav a {
-        margin-right: 1em;
-        text-decoration: none;
-        color: #444;
-  			border-bottom: 1px dotted var(--accent); /* Use seasonal accent here */
-      }
-      
-      .subtle-link {
-        color: inherit;
-        text-decoration: underline dotted var(--accent);
-        text-underline-offset: 3px;
-        text-decoration-thickness: 1px;
-        transition: color 0.3s ease, text-decoration-color 0.3s ease;
-      }
+		/* Nav bar formatting */
+		nav {
+			position: sticky;
+			top: 0;
+			background: rgba(249, 248, 244, 0.92);
+			z-index: 100;
+			padding-top: 0.25em;   
+			padding-bottom: 0.25em;
+			border-bottom: 2.5px solid var(--nav-col);
+		}
 
-      .subtle-link:hover {
-        color: var(--accent);
-        text-decoration-thickness: 1.2px;
-        text-underline-offset: 3px;
-      }
-      
-      a:visited {
-        color: #444;
-      }
+		/* Special link rules for nav bar */
+		nav a {
+			margin-right: 1em;
+			text-decoration: none;
+			color: #444;
+			border-bottom: 1px dotted var(--accent);
+		}
 
-      a:hover {
-        background-color: var(--hover-bg);
-        transition: background-color 0.3s ease;
-      }
+		/* For potential footnote feature. Not yet implemented. */
+		.note {
+			font-size: 0.9em;
+			font-style: italic;
+			color: #6a625a;
+		}
 
-      .note {
-        font-size: 0.9em;
-        font-style: italic;
-        color: #6a625a;
-      }
+		/* For routing to sections */
+		section {
+			margin-bottom: 3em;
+			scroll-margin-top: 100px;
+		}
 
-      section {
-        margin-bottom: 3em;
-        scroll-margin-top: 100px;
-      }
+		ul {
+			padding-left: 1.2em;
+		}
+		
+		.featured-item {
+			margin-bottom: 1em;
+		}
+		
 
-      ul {
-        padding-left: 1.2em;
-      }
-
-      .publication {
-        margin-bottom: 1em;
-      }
-
-      a {
-        transition: color 0.3s ease;
-      }
 
       body::after {
         content: '';
@@ -411,36 +405,36 @@
 	   <h2>writing</h2>
 	   </div>
 	
-	    <div class="publication">
-	      <a class="subtle-link" href="files/restoration.pdf" target="_blank">
+	    <div class="featured-item">
+	      <a href="files/restoration.pdf" target="_blank">
 	        <strong><em>Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950.</em></strong>
 	      </a><br/>
 	      M.A. Thesis. Trent University, 2023.
 	    </div>
 	
-	    <div class="publication">
-	      <a class="subtle-link" href="https://defendingthearcticrefuge.com/" target="_blank">
+	    <div class="featured-item">
+	      <a href="https://defendingthearcticrefuge.com/" target="_blank">
 	        <strong>Public History Companion Website for Finis Dunaway’s <em>Defending the Arctic Refuge </em>.</strong>
 	      </a><br/>
 	      With Finis Dunaway. Fall 2022.
 	    </div>
 	
-	    <div class="publication">
-	      <a class="subtle-link" href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank">
+	    <div class="featured-item">
+	      <a href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank">
 	        <strong>“What Minnesota’s Mineral Gaze Overlooks.”</strong>
 	      </a><br/>
 	      Edge Effects Digital Magazine, July 2022.
 	    </div>
 	
-	    <div class="publication">
-	      <a class="subtle-link" href="files/heat-pump.pdf" target="_blank">
+	    <div class="featured-item">
+	      <a href="files/heat-pump.pdf" target="_blank">
 	        <strong>“Air Source Heat Pumps in Wisconsin: Multifamily and Single-Family Applications.”</strong>
 	      </a><br/>
 	      With the Minnesota Center for Energy and Environment Program Development Team. Focus on Energy R&D Report, October 2021.
 	    </div>
 	
-	    <div class="publication">
-	      <a class="subtle-link" href="files/wintercreeper.pdf" target="_blank">
+	    <div class="featured-item">
+	      <a href="files/wintercreeper.pdf" target="_blank">
 	        <strong>“Non-Native Liana, Euonymus Fortunei, Associated with Increased Soil Nutrients, Unique Bacterial Communities, and Faster Decomposition Rate.”</strong>
 	      </a><br/>
 	      <em>Plant Ecology</em> 218 (December 2016): 329–343.
@@ -454,42 +448,42 @@
 	  <h2>speaking</h2>
 	  </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“Conservation in the Corn State: Agribusiness, Ecosystem Services, and the Transformation of Iowa Public Land Management, 1950–1990.”</strong><br/>
 	      Presenter and panel co-organizer at the annual meeting of the American Society for Environmental History, April 2025.
 	    </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“Sovereignty through Stewardship: Wild Rice, Minnesota Ojibwe Resurgence, and the Politics of Relational Restoration.”</strong><br/>
 	      Technologies of Sovereignty Graduate Conference, Columbia University, February 2025.
 	    </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“Temporal Recipe Knowledge in the Early Modern English Household.”</strong><br/>
 	      Princeton University Early Modern History Workshop. October 3, 2024.
 	    </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“Restoration, Reciprocity, and Rice: How Minnesota Ojibwe Governments and Activists Reclaimed Resource Management.”</strong><br/>
 	      Princeton University History of Science Program Seminar. September 2024.
 	    </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“In Search of the Unit of Ecological Community: Prairie Restoration and the Intermediate Geography of the American Midwest.”</strong><br/>
 	      Princeton University History of Science Program Seminar. March 2024.
 	    </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“Theory and Practice in the Prairie: Plant Community Structure and the Foundations of Restoration Ecology.”</strong><br/>
 	      History of Science Society Annual Conference, November 2022.
 	    </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“A Tragedy in Common: H. Scott Gordon, the Fisherman’s Problem, and the Rationalizing High Modernism of Cold War Bioeconomics.”</strong><br/>
 	      McGill–Queen’s Graduate History Conference, March 2022.
 	    </div>
 	
-	    <div class="publication">
+	    <div class="featured-item">
 	      <strong>“‘He was on Your Side and You Knew It’: A Profile of Harvey Stork, Professor of Botany and Founder of the Carleton Arboretum.”</strong><br/>
 	      Public Lecture at Carleton College, May 2019.
 	    </div>
@@ -503,7 +497,7 @@
 	  </div>
 	    <p>
 	      See the complete record
-	      <a href="files/AMHoyt_CV.pdf" class="subtle-link" target="_blank">here</a>.
+	      <a href="files/AMHoyt_CV.pdf" target="_blank">here</a>.
 	    </p>
 	
 	    <details>
@@ -569,13 +563,13 @@
   			<script type="text/javascript">
     			const user = "amhoyt";
     			const domain = "princeton.edu";
-			    document.write(`<a class="subtle-link" href="mailto:${user}@${domain}">${user}@${domain}</a>`);
+			    document.write(`<a href="mailto:${user}@${domain}">${user}@${domain}</a>`);
   			</script>
   			<noscript>[Enable JavaScript to view email]</noscript>
 			</li>
-	    <li><a class="subtle-link" href="https://history.princeton.edu/people/andrew-hoyt" target="_blank">Princeton History</a></li>
-	    <li><a class="subtle-link" href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
-	    <li><a class="subtle-link" href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia</a></li>
+	    <li><a href="https://history.princeton.edu/people/andrew-hoyt" target="_blank">Princeton History</a></li>
+	    <li><a href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
+	    <li><a href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia</a></li>
 	    </ul>
 			
 	  </footer>
