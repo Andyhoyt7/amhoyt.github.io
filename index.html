@@ -238,6 +238,11 @@
 			details[open] summary::before {
 	  			transform: rotate(90deg);
 			}
+
+			/* Adds space between the summary heading and the list below it */
+			details summary + ul {
+				margin-top: 0.4em;
+			}
 			
 			hr {
 				margin-top: 0.3em;
@@ -251,7 +256,8 @@
 			/* Adds some space between list items. */
 			ul.inline-spaced li {
 				margin-bottom: 0.4em;
-				padding-left: 1.4em;
+				padding-left: 1.6em;
+				border-bottom: 1px dotted #ccc; /* soft divider */
 				text-indent: -1.2em;
 			}	
 		</style>
