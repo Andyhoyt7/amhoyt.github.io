@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /files/AMHoyt_CV.pdf
+Disallow: /files/restoration.pdf
+Disallow: /files/heat-pump.pdf
+Disallow: /files/wintercreeper.pdf
