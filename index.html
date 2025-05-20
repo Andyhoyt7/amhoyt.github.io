@@ -253,12 +253,12 @@
 				margin-top: 2.2em;
 			}
 			
-			/* Adds some space between list items. */
+			/* Adds some space between list items. Must call this class when establishing the list. */
 			ul.inline-spaced li {
 				margin-bottom: 0.4em;
-				padding-left: 1.6em;
+				padding-left: 1.8em;
 				border-bottom: 1px solid rgba(47, 47, 47, 0.08); /* ink-black @ 8% */
-				text-indent: -1.0em;
+				text-indent: 0em; /* Add back in a negative number for hanging indent */
 			}
 			
 			/* Option of class without dividers, for teaching section that only has one item */
