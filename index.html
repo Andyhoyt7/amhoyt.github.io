@@ -241,7 +241,7 @@
 
 			/* Adds space between the summary heading and the list below it */
 			details summary + ul {
-				margin-top: 0.6em;
+				margin-top: 1.0em;
 			}
 			
 			hr {
@@ -259,7 +259,13 @@
 				padding-left: 1.6em;
 				border-bottom: 1px solid rgba(47, 47, 47, 0.08); /* ink-black @ 8% */
 				text-indent: -1.0em;
-			}	
+			}
+			
+			/* Option of class without dividers, for teaching section that only has one item */
+			ul.inline-spaced.no-divider li {
+				border-bottom: none;
+				padding-bottom: 0; /* Optional: reduces extra space */
+			}
 		</style>
 		
 		<!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
@@ -512,7 +518,7 @@
 			<!-- "Teaching" drop down section -->
 			<details>
 				<summary>teaching</summary>
-				<ul class="inline-spaced" style="list-style: none; margin: 0; padding-left: 1em;">
+				<ul class="inline-spaced no-divider" style="list-style: none; margin: 0; padding-left: 1em;">
 					<li>
 						<strong>Trent University School of the Environment Graduate Teaching Assistant (2021–2023)</strong><br/>
 						Supported undergraduate courses in environmental policy, restoration ecology, and environmental history.
@@ -607,7 +613,7 @@
 
 			<!-- CV file link -->
 			<p>
-				See the complete record <a href="files/AMHoyt_CV.pdf" target="_blank">here</a>.
+				See the rest <a href="files/AMHoyt_CV.pdf" target="_blank">here</a>.
 			</p>
 		</section>
 
