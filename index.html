@@ -252,16 +252,19 @@
 			ul.inline-spaced li {
 				list-style: none;
 				margin-bottom: 0.4em;
-				padding-left: 1.6em;
+				padding-left: 2.2em;
 				border-bottom: 1px solid rgba(47, 47, 47, 0.08); /* ink-black @ 8% */
-				text-indent: -0.6em; /* Hanging indent */
 			}
 			ul.inline-spaced li:last-child {
 				border-bottom: none;
 				padding-bottom: 0;
 			}
-			/* Adds space between the summary heading and the list below it */
 			
+			/* Pull the first line back out to create a hanging indent */
+			ul.inline-spaced li::first-line {
+				margin-left: -0.6em;
+			
+			/* Adds space between the summary heading and the list below it */
 			details summary + ul.inline-spaced {
 				margin-top: 1.0em;
 			}
