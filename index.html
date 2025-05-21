@@ -249,20 +249,22 @@
 			}
 			
 			/* Adds some space between list items. Must call this class when establishing the list. */
-			ul.inline-spaced li {
+			ul.cv-list li {
 				list-style: none;
 				margin-bottom: 0.4em;
-				padding-left: 2.2em;
+				padding-left: 1.6em;
 				border-bottom: 1px solid rgba(47, 47, 47, 0.08); /* ink-black @ 8% */
 			}
-			ul.inline-spaced li:last-child {
+			ul.cv-list li:last-child {
 				border-bottom: none;
 				padding-bottom: 0;
 			}
-			
-			/* Pull the first line back out to create a hanging indent */
-			ul.inline-spaced li::first-line {
-				margin-left: -0.6em;
+
+			/* Creates hanging indent class for lists */
+			ul.cv-list li .desc {
+				display: block;
+				margin-left: 0.6em;     /* indent amount */
+			}
 			
 			/* Adds space between the summary heading and the list below it */
 			details summary + ul.inline-spaced {
@@ -497,22 +499,30 @@
 			<!-- "Education" drop down section -->
 			<details>
 				<summary>education</summary>
-				<ul class="inline-spaced">
+				<ul class="cv-list">
 					<li>
 						<strong>PhD in History of Science</strong><br>
-						Princeton University, Expected 2028
+						<span class="list-desc">
+							Princeton University, Expected 2028
+						</span>
 					</li>
 					<li>
 						<strong>MA in History of Science</strong><br>
-						Princeton University, 2025
+						<span class="list-desc">
+							Princeton University, 2025
+						</span>
 					</li>
 					<li>
 						<strong>MA in History</strong><br>
-						Trent University, 2023
+						<span class="list-desc">
+							Trent University, 2023
+						</span>
 					</li>
 					<li>
 						<strong>BA in History, Minor in Medieval and Renaissance Studies</strong><br>
-						Carleton College, 2019
+						<span class="list-desc">
+							Carleton College, 2019
+						</span>
 					</li>
 				</ul>
 			</details>
@@ -520,10 +530,12 @@
 			<!-- "Teaching" drop down section -->
 			<details>
 				<summary>teaching</summary>
-				<ul class="inline-spaced">
+				<ul class="cv-list">
 					<li>
 						<strong>Trent University School of the Environment Graduate Teaching Assistant (2021–2023)</strong><br/>
-						Supported undergraduate courses in environmental policy, restoration ecology, and environmental history.
+						<span class="list-desc">
+							Supported undergraduate courses in environmental policy, restoration ecology, and environmental history.
+						</span>
 					</li>
 				</ul>
 			</details>
@@ -531,84 +543,120 @@
 			<!-- awards & honors section -->
 			<details>
 				<summary>awards & honors</summary>
-				<ul class="inline-spaced">
+				<ul class="cv-list">
 					<li>
 						<strong>General Examination Passed with Distinction</strong><br/>
-						Princeton University, May 2025
+						<span class="list-desc">
+							Princeton University, May 2025
+						</span>
 					</li>
 					<li>
 						<strong>Environmental History Fellow</strong><br>
-						American Society for Environmental History, 2025–2026
+						<span class="list-desc">
+							American Society for Environmental History, 2025–2026
+						</span>
 					</li>
 					<li>
 						<strong>Graduate Student Essay Prize</strong><br>
-						American Society for Environmental History, April 2025
+						<span class="list-desc">
+							American Society for Environmental History, April 2025
+						</span>
 					</li>
 					<li>
 						<strong>President’s Medal</strong><br>
-						Trent University, June 2024
+						<span class="list-desc">
+							Trent University, June 2024
+						</span>
 					</li>
 					<li>
 						<strong>Ontario Graduate Scholarship</strong><br>
-						Trent University, 2022–2023
+						<span class="list-desc">
+							Trent University, 2022–2023
+						</span>
 					</li>
 					<li>
 						<strong>Katherine S. McCarter Graduate Student Policy Award</strong><br>
-						Ecological Society of America, February 2022
+						<span class="list-desc">
+							Ecological Society of America, February 2022
+						</span>
 					</li>
 					<li>
 						<strong>Alan Wilson Entrance Award</strong><br>
-						Trent University, February 2021
+						<span class="list-desc">
+							Trent University, February 2021
+						</span>
 					</li>
 					<li>
 						<strong><em>Magna cum laude</em></strong><br>
-						Carleton College, June 2019
+						<span class="list-desc">
+							Carleton College, June 2019
+						</span>
 					</li>
 					<li>
 						<strong>Phi Beta Kappa</strong><br>
-						Carleton College, June 2019
+						<span class="list-desc">
+							Carleton College, June 2019
+						</span>
 					</li>
 					<li>
 						<strong>Laurence McKinley Gould Prize in Natural Science</strong><br>
-						Carleton College, June 2019
+						<span class="list-desc">
+							Carleton College, June 2019
+						</span>
 					</li>
 			</details>
 			
 			<!-- Service and advocacy section -->
 			<details>
 				<summary>service & advocacy</summary>
-				<ul class="inline-spaced">
+				<ul class="cv-list">
 					<li>
 						<strong>Earth and Environment Forum Steering Committee</strong><br>
-						History of Science Society, since 2024
+						<span class="list-desc">
+							History of Science Society, since 2024
+						</span>
 					</li>
 					<li>
 						<strong>Graduate History Association Committee</strong><br>
-						Princeton University, since 2023
+						<span class="list-desc">
+							Princeton University, since 2023
+						</span>
 					</li>
 					<li>
 						<strong>Communications Officer</strong><br>
-						History of Science Society Graduate and Early Career Caucus, since 2023
+						<span class="list-desc">
+							History of Science Society Graduate and Early Career Caucus, since 2023
+						</span>
 					</li>
 					<li>
 						<strong>History MA Program Director Search Committee</strong><br>
-						Trent University, 2022–2023
+						<span class="list-desc">
+							Trent University, 2022–2023
+						</span>
 					</li>
 					<li>
 						<strong>History MA Program Committee</strong><br>
-						Trent University, 2022–2023
+						<span class="list-desc">
+							Trent University, 2022–2023
+						</span>
 					</li>
 					<li>
 						<strong>Policy Action Team</strong><br>
-						MN350, 2019–2021
+						<span class="list-desc">
+							MN350, 2019–2021
+						</span>
 					</li>
 					<li>
 						<strong>Student Departmental Advisor</strong><br>
-						Carleton College History Department, 2018–2019
+						<span class="list-desc">
+							Carleton College History Department, 2018–2019
+						</span>
 					</li>
 					<li>
 						<strong>Environmental Carls Organized</strong><br>
-						Carleton College (2017–2019)
+						<span class="list-desc">
+							Carleton College (2017–2019)
+						</span>
 					</li>
 				</ul>
 			</details>
