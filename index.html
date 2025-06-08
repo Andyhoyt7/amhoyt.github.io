@@ -314,19 +314,27 @@
 				];
 				const season = seasons[month];
 	
-				// Sets seasonal favicon
-				const favicon = document.getElementById('dynamic-favicon');
-				const seasonalFavicons = {
-					spring: "img/spring.png",
-					summer: "img/summer.png",
-					fall: "img/fall.png",
-					winter: "img/winter.png"
-				};
-	
-				// Checks for season and appoints proper favicon
-				if (favicon && seasonalFavicons[season]) {
-					favicon.href = seasonalFavicons[season];
-				}
+				document.addEventListener("DOMContentLoaded", function () {
+  					const seasonalFavicons = {
+    						spring: "img/spring.png",
+    						summer: "img/summer.png",
+    						fall: "img/fall.png",
+    						winter: "img/winter.png"
+  					};
+
+  					const now = new Date();
+  					const month = now.getMonth();
+  					const seasons = [
+    						"winter", "winter", "spring", "spring", "spring", "summer",
+    						"summer", "summer", "fall", "fall", "fall", "winter"
+  					];
+  					const season = seasons[month];
+
+ 					const favicon = document.getElementById("dynamic-favicon");
+  					if (favicon && seasonalFavicons[season]) {
+    						favicon.href = seasonalFavicons[season];
+  						}
+				});
 	
 				// Defines seasonal quotes
 				const quotesBySeason = {
