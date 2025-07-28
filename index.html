@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Primary metadata -->
-		<meta charset="utf-8" />
-	  	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	  	<meta name="description" content="Ecology, environmental governance, and the politics of nature."/>
-		<link rel="canonical" href="https://amhoyt.com/" />
-	
-		<!-- OpenGraph metadata -->
-		<meta property="og:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
-	  	<meta property="og:description" content="Ecology, environmental governance, and the politics of nature." />
-	  	<meta property="og:type" content="website" />
-	  	<meta property="og:url" content="https://amhoyt.com/" />
-	  	<meta property="og:image" content="https://amhoyt.com/img/summer.png" />
-		
-		<!-- Twitter metadata -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Andrew Hoyt – PhD Candidate in the History of Science" />
-		<meta name="twitter:description" content="Ecology, environmental governance, and the politics of nature." />
-		<meta name="twitter:image" content="https://amhoyt.com/img/summer.png" />
-	
-		<!-- Title and favicon for search --> 
-		<title>Andrew Hoyt</title>
 
-		<!-- Sets up dynamic favicon for tabs, which is javascript below updates -->
-		<link id="dynamic-favicon" rel="icon" type="image/png" href="img/favicon.png">
-	
-		<!-- Schema.org JSON-LD structured data -->
-		<script type="application/ld+json"> {
+<head>
+	<!-- Primary metadata -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Ecology, environmental governance, and the politics of nature." />
+	<link rel="canonical" href="https://amhoyt.com/" />
+
+	<!-- OpenGraph metadata -->
+	<meta property="og:title" content="Andrew Hoyt - PhD Candidate in the History of Science" />
+	<meta property="og:description" content="Ecology, environmental governance, and the politics of nature." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://amhoyt.com/" />
+	<meta property="og:image" content="https://amhoyt.com/img/summer.png" />
+
+	<!-- Twitter metadata -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Andrew Hoyt - PhD Candidate in the History of Science" />
+	<meta name="twitter:description" content="Ecology, environmental governance, and the politics of nature." />
+	<meta name="twitter:image" content="https://amhoyt.com/img/summer.png" />
+
+	<!-- Title and favicon for search -->
+	<title>Andrew Hoyt</title>
+
+	<!-- Sets up dynamic favicon for tabs, which is javascript below updates -->
+	<link id="dynamic-favicon" rel="icon" type="image/png" href="img/favicon.png">
+
+	<!-- Schema.org JSON-LD structured data -->
+	<script type="application/ld+json"> {
 			"@context": "https://schema.org",
 			"@type": "Person",
 			"name": "Andrew Hoyt",
@@ -35,354 +36,368 @@
 			"url": "https://amhoyt.com"
 			}
 		</script>
-		
-		<!-- Style sheet for website. Defines color palette, seasonal logics, and link classes -->
-		<style>
-		
-			/* Fonts */
-	    		@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
-			
-			/* Color Palette */
-			:root {
-				--accent: #6a4f3b;
-				--hover-bg: #eae6da;
-				--steppe-green: #6d826a;
-				--birch-bark: #ede6da;
-				--tea-brown: #8d7351;
-				--ink-black: #2f2f2f;
-				--candlelight-gold: #eed17c;
-				--dacha-blue: #a3b9c9;
-				--nav-col: rgba(187, 183, 175, 0.4);
-			}
-			
-			/* Defines fonts and faint background image */
-			body {
-				font-family: 'EB Garamond', serif;
-				background-color: #f9f8f4;
-				color: #2f2f2f;
-				margin: 2em auto;
-				max-width: 720px;
-				line-height: 1.7;
-				padding: 0 1em;
-				background-image: radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
-				background-size: 10px 10px;
-			}
-	
-			/* Title font */
-			h1 {
-				font-family: 'Courier Prime', monospace;
-				font-weight: 300;
-				font-size: 2.2em;
-				margin: 2em 0 0.05em;
-			}
-	
-			/* Section heading font*/
-			h2 {
-				font-family: 'Courier Prime', monospace;
-				text-transform: lowercase;
-				margin-top: 2em;
-			}
-	
-			/* Colorful lines to the left of section headings */
-			.section-heading {
-				display: flex;
-				align-items: center;
-				margin-bottom: 1.2em;
-			}
-			.section-rule {
-				display: inline-block;
-				height: 3px;
-				border-radius: 1.5px;
-				width: 2.8em;
-				margin-right: 1.1em;
-				margin-bottom: 0.1em;
-				box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-			}
-			.section-rule.writing {
-				background: var(--candlelight-gold);
-			}
-			.section-rule.dialogue {
-				background: var(--dacha-blue);
-			}
-			.section-rule.particulars {
-				background: var(--tea-brown);
-			}
-			.section-heading h2 {
-				margin: 0;
-				padding: 0;
-				font-family: 'Courier Prime', monospace;
-	  	 		text-transform: lowercase;
-	  			font-size: 1.5em;
-	  			font-weight: 400;
-			}
-	
-			/* Global link styling. (Formerly a different "subtle link" class) */ 
-			a {
-				color: inherit;
-				text-decoration: none;
-				border-bottom: 1px dotted var(--accent);
-				padding-bottom: 1px;
-				transition: color 0.3s, border-bottom-color 0.3s;
-			}
-	
-			/* Esnures that link color does not change after being visited. */
-			a:visited {
-				color: inherit;
-			}
-	
-			/* Formats how links change when the cursor hovers over them */
-			a:hover {
-				color: var(--accent);
-				border-bottom: 1.2px dotted var(--accent);
-				background-color: var(--hover-bg);
-				transition: color 0.3s, border-bottom-color 0.3s, background-color 0.3s;
-			}
-	
-			/* Nav bar formatting */
-			nav {
-				position: sticky;
-				top: 0;
-				background: rgba(249, 248, 244, 1);
-				z-index: 100;
-				padding-top: 0.25em;   
-				padding-bottom: 0.25em;
-				border-bottom: 2.5px solid var(--nav-col);
-			}
-	
-			/* Special link rules for nav bar. This just makes sure they're seperated appropriately. */
-			nav a {
-				margin-right: 1em;
-			}
-	
-			/* For potential footnote feature. Not yet implemented. */
-			.note {
-				font-size: 0.9em;
-				font-style: italic;
-				color: #6a625a;
-			}
-	
-			/* For routing to sections */
-			section {
-				margin-bottom: 3em;
-				scroll-margin-top: 52px;
-			}
-	
-			/* Spacing for lists */
-			ul {
-				padding-left: 1.2em;
-			}
-	
-			/* Defines "featured item" class for publications, presentations, and other major works */
-			.featured-item {
-				margin-bottom: 1em;
-			}
-			
-			/* Adds subtle beige background that sweeps across the page over 60 seconds */
-			body::after {
-				content: '';
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				pointer-events: none;
-				background: linear-gradient(to bottom, transparent, rgba(220, 210, 200, 0.05));
-				mix-blend-mode: multiply;
-				z-index: 1;
-				animation: drift 60s linear infinite;
-			}
-	
-			/* Animation for linear gradient */
-			@keyframes drift {
-				0% { transform: translateY(0); }
-				100% { transform: translateY(100px); }
-			}
-	
-			/* Class that hides elements. Used for themes map. */
-			.hidden {
-				display: none;
-			}
-	
-			/* Sets spacing for detail blocks. */
-			details {
-				margin-bottom: 1.2em;
-			}
-	
-			/* Formatting for details blocks in CV section */
-			details summary {
-				font-weight: 600;
-				font-size: 1.08em;
-	  			cursor: pointer;
-	  			outline: none;
-	  			transition: color 0.25s;
-	  			display: flex;
-	  			align-items: center;
-	  			list-style: none;
-			}
-			
-			/* Remove all default markers/arrows. These were appearing in firefox on mobile. */
-			details summary::-webkit-details-marker {
-				display: none;
-			}
-			details summary::marker {
-	  			display: none;
-			}
-			
-			details summary::before {
-	  			content: "›";
-	  			display: inline-block;
-	  			margin-right: 0.45em;
-	  			transition: transform 0.25s;
-	  			font-size: 1em;
-			}
-			details[open] summary::before {
-	  			transform: rotate(90deg);
-			}
-			
-			hr {
-				margin-top: 0.3em;
-				margin-bottom: 0.3em;
+
+	<!-- Style sheet for website. Defines color palette, seasonal logics, and link classes -->
+	<style>
+		/* Fonts */
+		@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Courier+Prime&display=swap');
+
+		/* Color Palette */
+		:root {
+			--accent: #6a4f3b;
+			--hover-bg: #eae6da;
+			--steppe-green: #6d826a;
+			--birch-bark: #ede6da;
+			--tea-brown: #8d7351;
+			--ink-black: #2f2f2f;
+			--candlelight-gold: #eed17c;
+			--dacha-blue: #a3b9c9;
+			--nav-col: rgba(187, 183, 175, 0.4);
+		}
+
+		/* Defines fonts and faint background image */
+		body {
+			font-family: 'EB Garamond', serif;
+			background-color: #f9f8f4;
+			color: #2f2f2f;
+			margin: 2em auto;
+			max-width: 720px;
+			line-height: 1.7;
+			padding: 0 1em;
+			background-image: radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+			background-size: 10px 10px;
+		}
+
+		/* Title font */
+		h1 {
+			font-family: 'Courier Prime', monospace;
+			font-weight: 300;
+			font-size: 2.2em;
+			margin: 2em 0 0.05em;
+		}
+
+		/* Section heading font*/
+		h2 {
+			font-family: 'Courier Prime', monospace;
+			text-transform: lowercase;
+			margin-top: 2em;
+		}
+
+		/* Colorful lines to the left of section headings */
+		.section-heading {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1.2em;
+		}
+
+		.section-rule {
+			display: inline-block;
+			height: 3px;
+			border-radius: 1.5px;
+			width: 2.8em;
+			margin-right: 1.1em;
+			margin-bottom: 0.1em;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+		}
+
+		.section-rule.writing {
+			background: var(--candlelight-gold);
+		}
+
+		.section-rule.dialogue {
+			background: var(--dacha-blue);
+		}
+
+		.section-rule.particulars {
+			background: var(--tea-brown);
+		}
+
+		.section-heading h2 {
+			margin: 0;
+			padding: 0;
+			font-family: 'Courier Prime', monospace;
+			text-transform: lowercase;
+			font-size: 1.5em;
+			font-weight: 400;
+		}
+
+		/* Global link styling. (Formerly a different "subtle link" class) */
+		a {
+			color: inherit;
+			text-decoration: none;
+			border-bottom: 1px dotted var(--accent);
+			padding-bottom: 1px;
+			transition: color 0.3s, border-bottom-color 0.3s;
+		}
+
+		/* Esnures that link color does not change after being visited. */
+		a:visited {
+			color: inherit;
+		}
+
+		/* Formats how links change when the cursor hovers over them */
+		a:hover {
+			color: var(--accent);
+			border-bottom: 1.2px dotted var(--accent);
+			background-color: var(--hover-bg);
+			transition: color 0.3s, border-bottom-color 0.3s, background-color 0.3s;
+		}
+
+		/* Nav bar formatting */
+		nav {
+			position: sticky;
+			top: 0;
+			background: rgba(249, 248, 244, 1);
+			z-index: 100;
+			padding-top: 0.25em;
+			padding-bottom: 0.25em;
+			border-bottom: 2.5px solid var(--nav-col);
+		}
+
+		/* Special link rules for nav bar. This just makes sure they're seperated appropriately. */
+		nav a {
+			margin-right: 1em;
+		}
+
+		/* For potential footnote feature. Not yet implemented. */
+		.note {
+			font-size: 0.9em;
+			font-style: italic;
+			color: #6a625a;
+		}
+
+		/* For routing to sections */
+		section {
+			margin-bottom: 3em;
+			scroll-margin-top: 52px;
+		}
+
+		/* Spacing for lists */
+		ul {
+			padding-left: 1.2em;
+		}
+
+		/* Defines "featured item" class for publications, presentations, and other major works */
+		.featured-item {
+			margin-bottom: 1em;
+		}
+
+		/* Adds subtle beige background that sweeps across the page over 60 seconds */
+		body::after {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			background: linear-gradient(to bottom, transparent, rgba(220, 210, 200, 0.05));
+			mix-blend-mode: multiply;
+			z-index: 1;
+			animation: drift 60s linear infinite;
+		}
+
+		/* Animation for linear gradient */
+		@keyframes drift {
+			0% {
+				transform: translateY(0);
 			}
 
-			#broad-strokes {
-				margin-top: 2.2em;
+			100% {
+				transform: translateY(100px);
 			}
-			
-			/* Adds some space between list items. Must call this class when establishing the list. */
-			ul.cv-list li {
-				list-style: none;
-				margin-bottom: 0.4em;
-				padding-left: 1.6em;
-				border-bottom: 1px solid rgba(47, 47, 47, 0.08); /* ink-black @ 8% */
-			}
-			ul.cv-list li:last-child {
-				border-bottom: none;
-				padding-bottom: 0;
-			}
+		}
 
-			/* Creates hanging indent class for lists -- commented out because I'm not sure I actually like the indents.
+		/* Class that hides elements. Used for themes map. */
+		.hidden {
+			display: none;
+		}
+
+		/* Sets spacing for detail blocks. */
+		details {
+			margin-bottom: 1.2em;
+		}
+
+		/* Formatting for details blocks in CV section */
+		details summary {
+			font-weight: 600;
+			font-size: 1.08em;
+			cursor: pointer;
+			outline: none;
+			transition: color 0.25s;
+			display: flex;
+			align-items: center;
+			list-style: none;
+		}
+
+		/* Remove all default markers/arrows. These were appearing in firefox on mobile. */
+		details summary::-webkit-details-marker {
+			display: none;
+		}
+
+		details summary::marker {
+			display: none;
+		}
+
+		details summary::before {
+			content: "›";
+			display: inline-block;
+			margin-right: 0.45em;
+			transition: transform 0.25s;
+			font-size: 1em;
+		}
+
+		details[open] summary::before {
+			transform: rotate(90deg);
+		}
+
+		hr {
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+		}
+
+		#broad-strokes {
+			margin-top: 2.2em;
+		}
+
+		/* Adds some space between list items. Must call this class when establishing the list. */
+		ul.cv-list li {
+			list-style: none;
+			margin-bottom: 0.4em;
+			padding-left: 1.6em;
+			border-bottom: 1px solid rgba(47, 47, 47, 0.08);
+			/* ink-black @ 8% */
+		}
+
+		ul.cv-list li:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+
+		/* Creates hanging indent class for lists -- commented out because I'm not sure I actually like the indents.
 			ul.cv-list li .desc {
 				display: block;
 				margin-left: 0.6em;
 			} */
-			
-			/* Adds space between the summary heading and the list below it */
-			details summary + ul.inline-spaced {
-				margin-top: 1.0em;
+
+		/* Adds space between the summary heading and the list below it */
+		details summary+ul.inline-spaced {
+			margin-top: 1.0em;
+		}
+	</style>
+
+	<!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
+	<script data-goatcounter="https://amhoyt.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+	<!-- Javascript block -->
+	<script>
+		// Defines seasonal accents. Starts with a content loader. 
+		window.addEventListener('DOMContentLoaded', () => {
+			const now = new Date();
+			const month = now.getMonth();
+			const root = document.documentElement;
+
+			// Spring accents
+			if (month >= 2 && month <= 4) {
+				root.style.setProperty('--accent', '#4b6b36');
+				root.style.setProperty('--hover-bg', '#e7f1e5');
 			}
-		</style>
-		
-		<!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
-		<script data-goatcounter="https://amhoyt.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+			// Summer accents
+			else if (month >= 5 && month <= 7) {
+				root.style.setProperty('--accent', '#b65a2b');
+				root.style.setProperty('--hover-bg', '#fbeadd');
+			}
+			// Fall accents
+			else if (month >= 8 && month <= 10) {
+				root.style.setProperty('--accent', '#6a4f3b');
+				root.style.setProperty('--hover-bg', '#f0e7da');
+			}
+			// Winter accents
+			else {
+				root.style.setProperty('--accent', '#3b3f6a');
+				root.style.setProperty('--hover-bg', '#e6e9f0');
+			}
 
-		
-		<!-- Javascript block -->
-		<script>
-  // Defines seasonal accents. Starts with a content loader. 
-  window.addEventListener('DOMContentLoaded', () => {
-    const now = new Date();
-    const month = now.getMonth();
-    const root = document.documentElement;
+			// Labels each month with its corresponding seasonal identity
+			const seasons = [
+				'winter', 'winter', 'spring', 'spring', 'spring', 'summer',
+				'summer', 'summer', 'fall', 'fall', 'fall', 'winter'
+			];
+			const season = seasons[month];
 
-    // Spring accents
-    if (month >= 2 && month <= 4) {
-      root.style.setProperty('--accent', '#4b6b36');
-      root.style.setProperty('--hover-bg', '#e7f1e5');
-    }
-    // Summer accents
-    else if (month >= 5 && month <= 7) {
-      root.style.setProperty('--accent', '#b65a2b');
-      root.style.setProperty('--hover-bg', '#fbeadd');
-    }
-    // Fall accents
-    else if (month >= 8 && month <= 10) {
-      root.style.setProperty('--accent', '#6a4f3b');
-      root.style.setProperty('--hover-bg', '#f0e7da');
-    }
-    // Winter accents
-    else {
-      root.style.setProperty('--accent', '#3b3f6a');
-      root.style.setProperty('--hover-bg', '#e6e9f0');
-    }
+			// Sets seasonal favicon
+			const seasonalFavicons = {
+				spring: "img/spring.png",
+				summer: "img/summer.png",
+				fall: "img/fall.png",
+				winter: "img/winter.png"
+			};
+			const favicon = document.getElementById("dynamic-favicon");
+			if (favicon && seasonalFavicons[season]) {
+				favicon.href = seasonalFavicons[season];
+			}
 
-    // Labels each month with its corresponding seasonal identity
-    const seasons = [
-      'winter', 'winter', 'spring', 'spring', 'spring', 'summer',
-      'summer', 'summer', 'fall', 'fall', 'fall', 'winter'
-    ];
-    const season = seasons[month];
+			// Defines seasonal quotes
+			const quotesBySeason = {
+				spring: [
+					`“Spring is the time of plans and projects.” — Tolstoy`, // Anna Karenina, Part 1, Ch. 1
+					`“The sun was warm but the wind was chill. / You know how it is with an April day.” — Robert Frost`, // “Two Tramps in Mud Time” (1934)
+					`“Everything was blooming: the grass, the trees, and something in the soul.” — Tolstoy`, // Resurrection
+					`“April is the cruelest month, breeding / Lilacs out of the dead land” — T. S. Eliot` // The Waste Land (1922)
+				],
+				summer: [
+					`“It was the season of excess, of bloom and blur and burn.” — bell hooks`, // Belonging: A Culture of Place (2009)
+					`“In the heat of the summer sun, there was something false and oppressive in everything.” — Tolstoy` // Anna Karenina (Book 2)
+						`“Green was the silence, wet was the light, the month of June trembled like a butterfly.” — Pablo Neruda` // "The Poetry”
+				],
+				fall: [
+					`“The tints of autumn... a melancholy and graceful robe.” — Hawthorne`, // “The Old Manse” (1846)
+					`“Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long...” — Rilke`, // “Herbsttag / Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
+					`“To be rooted is perhaps the most important and least recognized need of the human soul.” — Simone Weil` // The Need for Roots (1949)
+				],
+				winter: [
+					`“In seed time learn, in harvest teach, in winter enjoy.” — William Blake`, // The Marriage of Heaven and Hell (1790–93)
+					`“A beautiful thing, though always a source of sadness, is never sad in itself.” — Simone Weil`, // Gravity and Grace (1947)
+					`“There's a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes.” — Emily Dickinson`, // “There’s a certain Slant of light” (Poem 258, ca. 1861)
+					`“Even silence is an answer.” — Wendell Berry` // “Healing” in *What Are People For?* (1990)
+				]
+			};
 
-    // Sets seasonal favicon
-    const seasonalFavicons = {
-      spring: "img/spring.png",
-      summer: "img/summer.png",
-      fall: "img/fall.png",
-      winter: "img/winter.png"
-    };
-    const favicon = document.getElementById("dynamic-favicon");
-    if (favicon && seasonalFavicons[season]) {
-      favicon.href = seasonalFavicons[season];
-    }
+			// Randomly appoints quote for season
+			const seasonalQuote = document.getElementById('seasonal-quote');
+			if (seasonalQuote && quotesBySeason[season]) {
+				const quotes = quotesBySeason[season];
+				const quote = quotes[Math.floor(Math.random() * quotes.length)];
+				seasonalQuote.textContent = quote;
+			}
 
-    // Defines seasonal quotes
-    const quotesBySeason = {
-      spring: [
-        `“Spring is the time of plans and projects.” — Tolstoy`, // Anna Karenina, Part 1, Ch. 1
-        `“The sun was warm but the wind was chill. / You know how it is with an April day.” — Robert Frost`, // “Two Tramps in Mud Time” (1934)
-        `“Everything was blooming: the grass, the trees, and something in the soul.” — Tolstoy`, // Resurrection
-        `“April is the cruelest month, breeding / Lilacs out of the dead land” — T. S. Eliot` // The Waste Land (1922)
-      ],
-      summer: [
-        `“It was the season of excess, of bloom and blur and burn.” — bell hooks`, // Belonging: A Culture of Place (2009)
-        `“In the heat of the summer sun, there was something false and oppressive in everything.” — Tolstoy` // Anna Karenina (Book 2)
-	`“Green was the silence, wet was the light, the month of June trembled like a butterfly.” — Pablo Neruda` // "The Poetry”
-      ],
-      fall: [
-        `“The tints of autumn... a melancholy and graceful robe.” — Hawthorne`, // “The Old Manse” (1846)
-        `“Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long...” — Rilke`, // “Herbsttag / Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
-        `“To be rooted is perhaps the most important and least recognized need of the human soul.” — Simone Weil` // The Need for Roots (1949)
-      ],
-      winter: [
-        `“In seed time learn, in harvest teach, in winter enjoy.” — William Blake`, // The Marriage of Heaven and Hell (1790–93)
-        `“A beautiful thing, though always a source of sadness, is never sad in itself.” — Simone Weil`, // Gravity and Grace (1947)
-        `“There’s a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes.” — Emily Dickinson`, // “There’s a certain Slant of light” (Poem 258, ca. 1861)
-        `“Even silence is an answer.” — Wendell Berry` // “Healing” in *What Are People For?* (1990)
-      ]
-    };
-
-    // Randomly appoints quote for season
-    const seasonalQuote = document.getElementById('seasonal-quote');
-    if (seasonalQuote && quotesBySeason[season]) {
-      const quotes = quotesBySeason[season];
-      const quote = quotes[Math.floor(Math.random() * quotes.length)];
-      seasonalQuote.textContent = quote;
-    }
-
-    const seasonLabel = document.getElementById('season-label');
-    if (seasonLabel) {
-      seasonLabel.textContent = season + ' ' + now.getFullYear();
-    }
-  });
-</script>
+			const seasonLabel = document.getElementById('season-label');
+			if (seasonLabel) {
+				seasonLabel.textContent = season + ' ' + now.getFullYear();
+			}
+		});
+	</script>
 
 
-	</head>
+</head>
 
-	<!-- Text of the website -->
-	<body>
+<!-- Text of the website -->
 
-		<!-- Title -->
-  		<h1>Andrew Mitchell Hoyt</h1>
+<body>
 
-		<!-- Nav bar -->
-  		<nav>
-			<a href="#broad-strokes">broad strokes</a>
-			<a href="#writing">writing</a>
-			<a href="#dialogue">dialogue</a>
-			<a href="#particulars">particulars</a>
-		</nav>
-		
-		<!-- Thematic menu that highlights items according to topics. Not implemented at the moment.
+	<!-- Title -->
+	<h1>Andrew Mitchell Hoyt</h1>
+
+	<!-- Nav bar -->
+	<nav>
+		<a href="#broad-strokes">broad strokes</a>
+		<a href="#writing">writing</a>
+		<a href="#dialogue">dialogue</a>
+		<a href="#particulars">particulars</a>
+	</nav>
+
+	<!-- Thematic menu that highlights items according to topics. Not implemented at the moment.
 		<button onclick="document.getElementById('theme-map').classList.toggle('hidden')"
 			style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;"> 
 			themes
@@ -398,308 +413,339 @@
 		<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">system</a></div>
 		</aside> 
 		-->
-		
-		<!-- first about section. Just a few paragraphs of text. -->
-		<section id="broad strokes">
-			<p>
-				I’m a PhD candidate in the history of science at Princeton University, where I study the interplay of ideas about natural order and governance since the mid-twentieth century. My work engages with the history of science, environmental and political history, and North American Indigenous history. 
-			</p>
-			<p>
-				My M.A. thesis examined how ecological restoration took shape as a concept, research agenda, and set of management practices in the Midwestern United States. I focused on the history of efforts to manage the region’s characteristic grasses — prairie tallgrass, corn, and wild rice — and the competing ecological and political visions they have embodied. More recently, I’ve been writing on Ojibwe relational restoration as a form of world-making and on the evolving ideals and techniques of public land management in the Corn Belt. My prospective dissertation project, <em>Chaos Ecology: Science, Governance, and the End of Natural Order</em>, will examine how late twentieth-century ecologists reimagined nature as dynamic and unpredictable and trace the consequences of this shift across scientific, political, and humanistic thought. 
-			</p>  
-			<p>
-				Before starting at Princeton, I graduated from Carleton College with a B.A. in History and a background in ecological research. I went on to work as an energy analyst and climate policy advocate in Minneapolis for several years before completing an M.A. in History at Trent University in Ontario.
-			</p>
-		</section>
 
-		<!-- Writing section -->
-		<section id="writing">
+	<!-- first about section. Just a few paragraphs of text. -->
+	<section id="broad strokes">
+		<p>
+			I'm a PhD candidate in the history of science at Princeton University, where I study the interplay of ideas
+			about natural order and governance since the mid-twentieth century. My work engages with the history of
+			science, environmental and political history, and North American Indigenous history.
+		</p>
+		<p>
+			My M.A. thesis examined how ecological restoration took shape as a concept, research agenda, and set of
+			management practices in the Midwestern United States. I focused on the history of efforts to manage the
+			region's characteristic grasses — prairie tallgrass, corn, and wild rice — and the competing ecological and
+			political visions they have embodied. More recently, I've been writing on Ojibwe relational restoration as a
+			form of world-making and on the evolving ideals and techniques of public land management in the Corn Belt.
+			My prospective dissertation project, <em>Chaos Ecology: Science, Governance, and the End of Natural
+				Order</em>, will examine how late twentieth-century ecologists reimagined nature as dynamic and
+			unpredictable and trace the consequences of this shift across scientific, political, and humanistic thought.
+		</p>
+		<p>
+			Before starting at Princeton, I graduated from Carleton College with a B.A. in History and a background in
+			ecological research. I went on to work as an energy analyst and climate policy advocate in Minneapolis for
+			several years before completing an M.A. in History at Trent University in Ontario.
+		</p>
+	</section>
 
-			<!-- Heading and colorful line -->
-			<div class="section-heading">
-				<span class="section-rule writing"></span>
-				<h2>writing</h2>
-			</div>
+	<!-- Writing section -->
+	<section id="writing">
 
-			<!-- Individual pieces and links -->
-			<div class="featured-item">
-				<a href="files/restoration.pdf" target="_blank">
-					<strong>“Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and Politics of Ecological Restoration since 1950”</strong></a><br/>
-					M.A. Thesis. Trent University, 2023.
-			</div>
-			<div class="featured-item">
-				<a href="https://defendingthearcticrefuge.com/" target="_blank">
-					<strong>Public History Companion Website for Finis Dunaway’s <em>Defending the Arctic Refuge</em></strong></a><br/>
-					With Finis Dunaway. Fall 2022.
-			</div>
-			<div class="featured-item">
-				<a href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank"><strong>“What Minnesota’s Mineral Gaze Overlooks”</strong></a><br/>
-				Edge Effects Digital Magazine, July 2022.
-			</div>
-			<div class="featured-item">
-				<a href="files/heat-pump.pdf" target="_blank">
-					<strong>“Air Source Heat Pumps in Wisconsin: Multifamily and Single-Family Applications”</strong></a><br/>
-					With the Minnesota Center for Energy and Environment Program Development Team. Focus on Energy R&D Report, October 2021.
-			</div>
-			<div class="featured-item">
-				<a href="files/wintercreeper.pdf" target="_blank">
-					<strong>“Non-Native Liana, Euonymus Fortunei, Associated with Increased Soil Nutrients, Unique Bacterial Communities, and Faster Decomposition Rate”</strong></a><br/>
-					<em>Plant Ecology</em> 218 (December 2016): 329–343.
-			</div>
-		</section>
-
-		<!-- dialogue section -->
-		<section id="dialogue">
-			<div class="section-heading">
-				<span class="section-rule dialogue"></span>
-				<h2>dialogue</h2>
-			</div>
-
-			<!-- Individual items -->
-			<div class="featured-item">
-				<strong>“Conservation in the Corn State: Agribusiness, Ecosystem Services, and the Transformation of Iowa Public Land Management, 1950–1990”</strong><br/>
-				Presenter and panel co-organizer at the annual meeting of the American Society for Environmental History, April 2025.
-			</div>
-			<div class="featured-item">
-				<strong>“Sovereignty through Stewardship: Wild Rice, Minnesota Ojibwe Resurgence, and the Politics of Relational Restoration”</strong><br/>
-				Technologies of Sovereignty Graduate Conference, Columbia University, February 2025.
-			</div>
-			<div class="featured-item">
-				<strong>“Temporal Recipe Knowledge in the Early Modern English Household”</strong><br/>
-				Princeton University Early Modern History Workshop. October 3, 2024.
-			</div>
-			<div class="featured-item">
-				<strong>“Restoration, Reciprocity, and Rice: How Minnesota Ojibwe Governments and Activists Reclaimed Resource Management”</strong><br/>
-				Princeton University History of Science Program Seminar. September 2024.
-			</div>
-			<div class="featured-item">
-				<strong>“In Search of the Unit of Ecological Community: Prairie Restoration and the Intermediate Geography of the American Midwest”</strong><br/>
-				Princeton University History of Science Program Seminar. March 2024.
-			</div>
-			<div class="featured-item">
-				<strong>“Theory and Practice in the Prairie: Plant Community Structure and the Foundations of Restoration Ecology”</strong><br/>
-				History of Science Society Annual Conference, November 2022.
-			</div>
-			<div class="featured-item">
-				<strong>“A Tragedy in Common: H. Scott Gordon, the Fisherman’s Problem, and the Rationalizing High Modernism of Cold War Bioeconomics”</strong><br/>
-				McGill–Queen’s Graduate History Conference, March 2022.
-			</div>
-			<div class="featured-item">
-				<strong>“‘He was on Your Side and You Knew It’: A Profile of Harvey Stork, Professor of Botany and Founder of the Carleton Arboretum”</strong><br/>
-				Public Lecture at Carleton College, May 2019.
-			</div>
-		</section>
-		
-		<!-- CV section -->
-		<section id="particulars">
-			<div class="section-heading">
-				<span class="section-rule particulars"></span>
-				<h2>particulars</h2>
-			</div>
-
-			<!-- "Education" drop down section -->
-			<details>
-				<summary>education</summary>
-				<ul class="cv-list">
-					<li>
-						<strong>PhD in History of Science</strong><br>
-						<span class="desc">
-							Princeton University, in progress
-						</span>
-					</li>
-					<li>
-						<strong>MA in History of Science</strong><br>
-						<span class="desc">
-							Princeton University, 2025
-						</span>
-					</li>
-					<li>
-						<strong>MA in History</strong><br>
-						<span class="desc">
-							Trent University, 2023
-						</span>
-					</li>
-					<li>
-						<strong>BA in History, Minor in Medieval and Renaissance Studies</strong><br>
-						<span class="desc">
-							Carleton College, 2019
-						</span>
-					</li>
-				</ul>
-			</details>
-			
-			<!-- "Teaching" drop down section -->
-			<details>
-				<summary>teaching</summary>
-				<ul class="cv-list">
-					<li>
-						<strong>Trent University School of the Environment Graduate Teaching Assistant (2021–2023)</strong><br/>
-						<span class="desc">
-							Supported undergraduate courses in environmental policy, restoration ecology, and environmental history.
-						</span>
-					</li>
-				</ul>
-			</details>
-			
-			<!-- awards & honors section -->
-			<details>
-				<summary>awards & honors</summary>
-				<ul class="cv-list">
-					<li>
-						<strong>General Examination Passed with Distinction</strong><br/>
-						<span class="desc">
-							Princeton University, May 2025
-						</span>
-					</li>
-					<li>
-						<strong>Environmental History Fellow</strong><br>
-						<span class="desc">
-							American Society for Environmental History, 2025–2026
-						</span>
-					</li>
-					<li>
-						<strong>Graduate Student Essay Prize</strong><br>
-						<span class="desc">
-							American Society for Environmental History, April 2025
-						</span>
-					</li>
-					<li>
-						<strong>President’s Medal</strong><br>
-						<span class="desc">
-							Trent University, June 2024
-						</span>
-					</li>
-					<li>
-						<strong>Ontario Graduate Scholarship</strong><br>
-						<span class="desc">
-							Trent University, 2022–2023
-						</span>
-					</li>
-					<li>
-						<strong>Katherine S. McCarter Graduate Student Policy Award</strong><br>
-						<span class="desc">
-							Ecological Society of America, February 2022
-						</span>
-					</li>
-					<li>
-						<strong>Alan Wilson Entrance Award</strong><br>
-						<span class="desc">
-							Trent University, February 2021
-						</span>
-					</li>
-					<li>
-						<strong><em>Magna cum laude</em></strong><br>
-						<span class="desc">
-							Carleton College, June 2019
-						</span>
-					</li>
-					<li>
-						<strong>Phi Beta Kappa</strong><br>
-						<span class="desc">
-							Carleton College, June 2019
-						</span>
-					</li>
-					<li>
-						<strong>Laurence McKinley Gould Prize in Natural Science</strong><br>
-						<span class="desc">
-							Carleton College, June 2019
-						</span>
-					</li>
-			</details>
-			
-			<!-- Service and advocacy section -->
-			<details>
-				<summary>service & advocacy</summary>
-				<ul class="cv-list">
-					<li>
-						<strong>Earth and Environment Forum Steering Committee</strong><br>
-						<span class="desc">
-							History of Science Society, since 2024
-						</span>
-					</li>
-					<li>
-						<strong>Graduate History Association Committee</strong><br>
-						<span class="desc">
-							Princeton University, since 2023
-						</span>
-					</li>
-					<li>
-						<strong>Communications Officer</strong><br>
-						<span class="desc">
-							History of Science Society Graduate and Early Career Caucus, since 2023
-						</span>
-					</li>
-					<li>
-						<strong>History MA Program Director Search Committee</strong><br>
-						<span class="desc">
-							Trent University, 2022–2023
-						</span>
-					</li>
-					<li>
-						<strong>History MA Program Committee</strong><br>
-						<span class="desc">
-							Trent University, 2022–2023
-						</span>
-					</li>
-					<li>
-						<strong>Policy Action Team</strong><br>
-						<span class="desc">
-							MN350, 2019–2021
-						</span>
-					</li>
-					<li>
-						<strong>Student Departmental Advisor</strong><br>
-						<span class="desc">
-							Carleton College History Department, 2018–2019
-						</span>
-					</li>
-					<li>
-						<strong>Environmental Carls Organized</strong><br>
-						<span class="desc">
-							Carleton College (2017–2019)
-						</span>
-					</li>
-				</ul>
-			</details>
-
-			<!-- CV file link -->
-			<p>
-				See the rest <a href="files/AMHoyt_CV.pdf" target="_blank">here</a>.
-			</p>
-		</section>
-
-		<!-- Season label that appears in the bottom right corner -->
-		<div id="season-label" 
-			style="position: fixed; bottom: 1em; right: 1em; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;">
+		<!-- Heading and colorful line -->
+		<div class="section-heading">
+			<span class="section-rule writing"></span>
+			<h2>writing</h2>
 		</div>
-		
-		<!-- Footer with links -->
-		<footer style="font-family: 'Courier Prime', monospace; font-size: 0.9em; color: #6a625a; text-align: center; margin-top: 4em;">
-			
-			<!-- List of links in the footer. Email is configured in some arcane way to disuade bots... -->
-			<ul style="list-style: none; padding: 0;">
+
+		<!-- Individual pieces and links -->
+		<div class="featured-item">
+			<a href="files/restoration.pdf" target="_blank">
+				<strong>“Ecology, Settler Colonialism, and the Environments of the American Midwest: The Science and
+					Politics of Ecological Restoration since 1950”</strong></a><br />
+			M.A. Thesis. Trent University, 2023.
+		</div>
+		<div class="featured-item">
+			<a href="https://defendingthearcticrefuge.com/" target="_blank">
+				<strong>Public History Companion Website for Finis Dunaway's <em>Defending the Arctic
+						Refuge</em></strong></a><br />
+			With Finis Dunaway. Fall 2022.
+		</div>
+		<div class="featured-item">
+			<a href="https://edgeeffects.net/minnesota-mineral-gaze/" target="_blank"><strong>“What Minnesota's Mineral
+					Gaze Overlooks”</strong></a><br />
+			Edge Effects Digital Magazine, July 2022.
+		</div>
+		<div class="featured-item">
+			<a href="files/heat-pump.pdf" target="_blank">
+				<strong>“Air Source Heat Pumps in Wisconsin: Multifamily and Single-Family
+					Applications”</strong></a><br />
+			With the Minnesota Center for Energy and Environment Program Development Team. Focus on Energy R&D Report,
+			October 2021.
+		</div>
+		<div class="featured-item">
+			<a href="files/wintercreeper.pdf" target="_blank">
+				<strong>“Non-Native Liana, Euonymus Fortunei, Associated with Increased Soil Nutrients, Unique Bacterial
+					Communities, and Faster Decomposition Rate”</strong></a><br />
+			<em>Plant Ecology</em> 218 (December 2016): 329-343.
+		</div>
+	</section>
+
+	<!-- dialogue section -->
+	<section id="dialogue">
+		<div class="section-heading">
+			<span class="section-rule dialogue"></span>
+			<h2>dialogue</h2>
+		</div>
+
+		<!-- Individual items -->
+		<div class="featured-item">
+			<strong>“Conservation in the Corn State: Agribusiness, Ecosystem Services, and the Transformation of Iowa
+				Public Land Management, 1950-1990”</strong><br />
+			Presenter and panel co-organizer at the annual meeting of the American Society for Environmental History,
+			April 2025.
+		</div>
+		<div class="featured-item">
+			<strong>“Sovereignty through Stewardship: Wild Rice, Minnesota Ojibwe Resurgence, and the Politics of
+				Relational Restoration”</strong><br />
+			Technologies of Sovereignty Graduate Conference, Columbia University, February 2025.
+		</div>
+		<div class="featured-item">
+			<strong>“Temporal Recipe Knowledge in the Early Modern English Household”</strong><br />
+			Princeton University Early Modern History Workshop. October 3, 2024.
+		</div>
+		<div class="featured-item">
+			<strong>“Restoration, Reciprocity, and Rice: How Minnesota Ojibwe Governments and Activists Reclaimed
+				Resource Management”</strong><br />
+			Princeton University History of Science Program Seminar. September 2024.
+		</div>
+		<div class="featured-item">
+			<strong>“In Search of the Unit of Ecological Community: Prairie Restoration and the Intermediate Geography
+				of the American Midwest”</strong><br />
+			Princeton University History of Science Program Seminar. March 2024.
+		</div>
+		<div class="featured-item">
+			<strong>“Theory and Practice in the Prairie: Plant Community Structure and the Foundations of Restoration
+				Ecology”</strong><br />
+			History of Science Society Annual Conference, November 2022.
+		</div>
+		<div class="featured-item">
+			<strong>“A Tragedy in Common: H. Scott Gordon, the Fisherman's Problem, and the Rationalizing High Modernism
+				of Cold War Bioeconomics”</strong><br />
+			McGill-Queen's Graduate History Conference, March 2022.
+		</div>
+		<div class="featured-item">
+			<strong>“'He was on Your Side and You Knew It': A Profile of Harvey Stork, Professor of Botany and Founder
+				of the Carleton Arboretum”</strong><br />
+			Public Lecture at Carleton College, May 2019.
+		</div>
+	</section>
+
+	<!-- CV section -->
+	<section id="particulars">
+		<div class="section-heading">
+			<span class="section-rule particulars"></span>
+			<h2>particulars</h2>
+		</div>
+
+		<!-- "Education" drop down section -->
+		<details>
+			<summary>education</summary>
+			<ul class="cv-list">
 				<li>
-					<script type="text/javascript">
-						const user = "amhoyt";
-						const domain = "princeton.edu";
-						document.write(`<a href="mailto:${user}@${domain}">${user}@${domain}</a>`);
-					</script>
-					<noscript>[Enable JavaScript to view email]</noscript>
+					<strong>PhD in History of Science</strong><br>
+					<span class="desc">
+						Princeton University, in progress
+					</span>
 				</li>
-				<li><a href="https://history.princeton.edu/people/andrew-hoyt" target="_blank">Princeton History</a></li>
-				<li><a href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
-				<li><a href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia</a></li>
+				<li>
+					<strong>MA in History of Science</strong><br>
+					<span class="desc">
+						Princeton University, 2025
+					</span>
+				</li>
+				<li>
+					<strong>MA in History</strong><br>
+					<span class="desc">
+						Trent University, 2023
+					</span>
+				</li>
+				<li>
+					<strong>BA in History, Minor in Medieval and Renaissance Studies</strong><br>
+					<span class="desc">
+						Carleton College, 2019
+					</span>
+				</li>
 			</ul>
-		</footer>
-		
-		<!-- Code for seasonal quites at bottom of page -->
-		<div id="seasonal-quote"
-			style="margin-top: 1.5em; font-style: italic; text-align: center;">
-		</div>
+		</details>
 
-		<!-- Note about design and low-tech -->
-		<div style="font-size:0.85em; color:#6a625a; text-align:center; margin: 2.5em 0 1.5em 0;">
-			A seasonal, <a href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-low-tech-website/" target="_blank">low-tech</a> website by Andrew Hoyt. 75kb and <a href="https://www.websitecarbon.com/website/amhoyt-com/" target="_blank">~0.01g CO2</a> per visit.
-		</div>
-	</body>
+		<!-- "Teaching" drop down section -->
+		<details>
+			<summary>teaching</summary>
+			<ul class="cv-list">
+				<li>
+					<strong>Trent University School of the Environment Graduate Teaching Assistant
+						(2021-2023)</strong><br />
+					<span class="desc">
+						Graded and ran seminars for undergraduate courses in environmental politics, resource
+						management, and environmental
+						history.
+					</span>
+				</li>
+			</ul>
+		</details>
+
+		<!-- awards & honors section -->
+		<details>
+			<summary>awards & honors</summary>
+			<ul class="cv-list">
+				<li>
+					<strong>General Examination Passed with Distinction</strong><br />
+					<span class="desc">
+						Princeton University, May 2025
+					</span>
+				</li>
+				<li>
+					<strong>Environmental History Fellow</strong><br>
+					<span class="desc">
+						American Society for Environmental History, 2025-2026
+					</span>
+				</li>
+				<li>
+					<strong>Graduate Student Essay Prize</strong><br>
+					<span class="desc">
+						American Society for Environmental History, April 2025
+					</span>
+				</li>
+				<li>
+					<strong>President's Medal</strong><br>
+					<span class="desc">
+						Trent University, June 2024
+					</span>
+				</li>
+				<li>
+					<strong>Ontario Graduate Scholarship</strong><br>
+					<span class="desc">
+						Trent University, 2022-2023
+					</span>
+				</li>
+				<li>
+					<strong>Katherine S. McCarter Graduate Student Policy Award</strong><br>
+					<span class="desc">
+						Ecological Society of America, February 2022
+					</span>
+				</li>
+				<li>
+					<strong>Alan Wilson Entrance Award</strong><br>
+					<span class="desc">
+						Trent University, February 2021
+					</span>
+				</li>
+				<li>
+					<strong><em>Magna cum laude</em></strong><br>
+					<span class="desc">
+						Carleton College, June 2019
+					</span>
+				</li>
+				<li>
+					<strong>Phi Beta Kappa</strong><br>
+					<span class="desc">
+						Carleton College, June 2019
+					</span>
+				</li>
+				<li>
+					<strong>Laurence McKinley Gould Prize in Natural Science</strong><br>
+					<span class="desc">
+						Carleton College, June 2019
+					</span>
+				</li>
+		</details>
+
+		<!-- Service and advocacy section -->
+		<details>
+			<summary>service & advocacy</summary>
+			<ul class="cv-list">
+				<li>
+					<strong>Earth and Environment Forum Steering Committee</strong><br>
+					<span class="desc">
+						History of Science Society, since 2024
+					</span>
+				</li>
+				<li>
+					<strong>Graduate History Association Committee</strong><br>
+					<span class="desc">
+						Princeton University, since 2023
+					</span>
+				</li>
+				<li>
+					<strong>Communications Officer</strong><br>
+					<span class="desc">
+						History of Science Society Graduate and Early Career Caucus, since 2023
+					</span>
+				</li>
+				<li>
+					<strong>History MA Program Director Search Committee</strong><br>
+					<span class="desc">
+						Trent University, 2022-2023
+					</span>
+				</li>
+				<li>
+					<strong>History MA Program Committee</strong><br>
+					<span class="desc">
+						Trent University, 2022-2023
+					</span>
+				</li>
+				<li>
+					<strong>Policy Action Team</strong><br>
+					<span class="desc">
+						MN350, 2019-2021
+					</span>
+				</li>
+				<li>
+					<strong>Student Departmental Advisor</strong><br>
+					<span class="desc">
+						Carleton College History Department, 2018-2019
+					</span>
+				</li>
+				<li>
+					<strong>Environmental Carls Organized</strong><br>
+					<span class="desc">
+						Carleton College (2017-2019)
+					</span>
+				</li>
+			</ul>
+		</details>
+
+		<!-- CV file link -->
+		<p>
+			See the rest <a href="files/AMHoyt_CV.pdf" target="_blank">here</a>.
+		</p>
+	</section>
+
+	<!-- Season label that appears in the bottom right corner -->
+	<div id="season-label"
+		style="position: fixed; bottom: 1em; right: 1em; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;">
+	</div>
+
+	<!-- Footer with links -->
+	<footer
+		style="font-family: 'Courier Prime', monospace; font-size: 0.9em; color: #6a625a; text-align: center; margin-top: 4em;">
+
+		<!-- List of links in the footer. Email is configured in some arcane way to disuade bots... -->
+		<ul style="list-style: none; padding: 0;">
+			<li>
+				<script type="text/javascript">
+					const user = "amhoyt";
+					const domain = "princeton.edu";
+					document.write(`<a href="mailto:${user}@${domain}">${user}@${domain}</a>`);
+				</script>
+				<noscript>[Enable JavaScript to view email]</noscript>
+			</li>
+			<li><a href="https://history.princeton.edu/people/andrew-hoyt" target="_blank">Princeton History</a></li>
+			<li><a href="https://www.linkedin.com/in/andy-hoyt/" target="_blank">LinkedIn</a></li>
+			<li><a href="https://princeton.academia.edu/AndyHoyt" target="_blank">Academia</a></li>
+		</ul>
+	</footer>
+
+	<!-- Code for seasonal quites at bottom of page -->
+	<div id="seasonal-quote" style="margin-top: 1.5em; font-style: italic; text-align: center;">
+	</div>
+
+	<!-- Note about design and low-tech -->
+	<div style="font-size:0.85em; color:#6a625a; text-align:center; margin: 2.5em 0 1.5em 0;">
+		A seasonal, <a href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-low-tech-website/"
+			target="_blank">low-tech</a> website by Andrew Hoyt. 75kb and <a
+			href="https://www.websitecarbon.com/website/amhoyt-com/" target="_blank">~0.01g CO2</a> per visit.
+	</div>
+</body>
+
 </html>
