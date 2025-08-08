@@ -397,22 +397,27 @@
 		<a href="#particulars">particulars</a>
 	</nav>
 
-	<!-- Thematic menu that highlights items according to topics. Not implemented at the moment.
-		<button onclick="document.getElementById('theme-map').classList.toggle('hidden')"
-			style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;"> 
-			themes
-		</button>
-		
-		<aside class="hidden" id="theme-map"
-			style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;">
+	<!-- Thematic menu that highlights items according to topics. Not implemented at the moment. -->
+	<button onclick="document.getElementById('theme-map').classList.toggle('hidden')"
+		style="position: fixed; top: 1em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; background: none; border: none; color: var(--accent); cursor: pointer; z-index: 10;">
+		themes
+	</button>
+
+	<aside class="hidden" id="theme-map"
+		style="position: fixed; top: 3em; right: 1em; font-family: 'Courier Prime', monospace; font-size: 0.8em; color: #6a625a; opacity: 0.8; border-left: 2px dotted #bbb; padding-left: 0.5em; max-width: 150px; background: #f9f8f4;">
 		<div style="margin-bottom: 0.5em; font-weight: bold;">themes</div>
-		<div><a href="#cv" style="text-decoration: none; color: var(--accent);" title="The management of things">governance</a></div>
-		<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Things that do not resolve cleanly">uncertainty</a></div>
-		<div><a href="#publications" style="text-decoration: none; color: var(--accent);" title="Repairing what was broken by development or conquest">restoration</a></div>
-		<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="The study of environments, organisms, and their interdependence">ecology</a></div>
-		<div><a href="#about" style="text-decoration: none; color: var(--accent);" title="Feedback, loops, complexity, emergence">system</a></div>
-		</aside> 
-		-->
+		<div><a href="#cv" style="text-decoration: none; color: var(--accent);"
+				title="The management of things">governance</a></div>
+		<div><a href="#about" style="text-decoration: none; color: var(--accent);"
+				title="Things that do not resolve cleanly">uncertainty</a></div>
+		<div><a href="#publications" style="text-decoration: none; color: var(--accent);"
+				title="Repairing what was broken by development or conquest">restoration</a></div>
+		<div><a href="#about" style="text-decoration: none; color: var(--accent);"
+				title="The study of environments, organisms, and their interdependence">ecology</a></div>
+		<div><a href="#about" style="text-decoration: none; color: var(--accent);"
+				title="Feedback, loops, complexity, emergence">system</a></div>
+	</aside>
+
 
 	<!-- first about section. Just a few paragraphs of text. -->
 	<section id="broad strokes">
@@ -454,24 +459,18 @@
 			<h2>writing</h2>
 		</div>
 
-		<div class="featured-item">
-			<strong>“Embracing Chaos: C.S. Holling's “Science of Surprise” from Predator-Prey to Panarchy</strong><br />
-			Working Paper.
-		</div>
+		<!-- Individual pieces and links -->
 
 		<div class="featured-item">
+			<strong>“Embracing Chaos: C.S. Holling's 'Science of Surprise' from Predator-Prey to
+				Panarchy”</strong><br />
 			<strong>“Ecology from the Grassroots: Restoring Plant Communities in the American Midwest,
-				1940-1970</strong><br />
-			Working Paper.
-		</div>
-
-		<div class="featured-item">
+				1940-1970”</strong><br />
 			<strong>“Sovereignty through Stewardship: Wild Rice, Minnesota Ojibwe Resurgence, and the Politics of
 				Relational Restoration”</strong><br />
-			Working Paper.
+			Working Papers.
 		</div>
 
-		<!-- Individual pieces and links -->
 		<!-- H-Net review, for when its published
 		<div class="featured-item">
 			<a href="..." target="_blank">
@@ -753,7 +752,7 @@
 
 	<!-- Season label that appears in the bottom right corner -->
 	<div id="season-label"
-		style="position: fixed; bottom: 1em; right: 1em; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;">
+		style="position: fixed; bottom: 1em; right: 1em; z-index: 999; font-size: 0.8em; font-style: italic; color: #6a625a; opacity: 0.7;">
 	</div>
 
 	<!-- Footer with links -->
@@ -776,9 +775,10 @@
 		</ul>
 	</footer>
 
-	<!-- Code for seasonal quites at bottom of page -->
+	<!-- Code for seasonal quites at bottom of page 
 	<div id="seasonal-quote" style="margin-top: 1.5em; font-style: italic; text-align: center;">
 	</div>
+	-->
 
 	<!-- Note about design and low-tech -->
 	<div style="font-size:0.85em; color:#6a625a; text-align:center; margin: 2.5em 0 1.5em 0;">
