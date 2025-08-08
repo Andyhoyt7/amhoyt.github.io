@@ -304,6 +304,9 @@
 			const month = now.getMonth();
 			const root = document.documentElement;
 
+			console.log("Current date:", now); // Log the current date
+			console.log("Current month:", month); // Log the current month
+
 			// Spring accents
 			if (month >= 2 && month <= 4) {
 				root.style.setProperty('--accent', '#4b6b36');
@@ -332,57 +335,68 @@
 			];
 			const season = seasons[month];
 
-			// Sets seasonal favicon
-			const seasonalFavicons = {
-				spring: "img/spring.png",
-				summer: "img/summer.png",
-				fall: "img/fall.png",
-				winter: "img/winter.png"
-			};
-			const favicon = document.getElementById("dynamic-favicon");
-			if (favicon && seasonalFavicons[season]) {
-				favicon.href = seasonalFavicons[season];
-			}
-
-			// Defines seasonal quotes
-			const quotesBySeason = {
-				spring: [
-					`“Spring is the time of plans and projects.” — Tolstoy`, // Anna Karenina, Part 1, Ch. 1
-					`“The sun was warm but the wind was chill. / You know how it is with an April day.” — Robert Frost`, // “Two Tramps in Mud Time” (1934)
-					`“Everything was blooming: the grass, the trees, and something in the soul.” — Tolstoy`, // Resurrection
-					`“April is the cruelest month, breeding / Lilacs out of the dead land” — T. S. Eliot` // The Waste Land (1922)
-				],
-				summer: [
-					`“It was the season of excess, of bloom and blur and burn.” — bell hooks`, // Belonging: A Culture of Place (2009)
-					`“In the heat of the summer sun, there was something false and oppressive in everything.” — Tolstoy` // Anna Karenina (Book 2)
-						`“Green was the silence, wet was the light, the month of June trembled like a butterfly.” — Pablo Neruda` // "The Poetry”
-				],
-				fall: [
-					`“The tints of autumn... a melancholy and graceful robe.” — Hawthorne`, // “The Old Manse” (1846)
-					`“Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long...” — Rilke`, // “Herbsttag / Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
-					`“To be rooted is perhaps the most important and least recognized need of the human soul.” — Simone Weil` // The Need for Roots (1949)
-				],
-				winter: [
-					`“In seed time learn, in harvest teach, in winter enjoy.” — William Blake`, // The Marriage of Heaven and Hell (1790–93)
-					`“A beautiful thing, though always a source of sadness, is never sad in itself.” — Simone Weil`, // Gravity and Grace (1947)
-					`“There's a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes.” — Emily Dickinson`, // “There’s a certain Slant of light” (Poem 258, ca. 1861)
-					`“Even silence is an answer.” — Wendell Berry` // “Healing” in *What Are People For?* (1990)
-				]
-			};
-
-			// Randomly appoints quote for season
-			const seasonalQuote = document.getElementById('seasonal-quote');
-			if (seasonalQuote && quotesBySeason[season]) {
-				const quotes = quotesBySeason[season];
-				const quote = quotes[Math.floor(Math.random() * quotes.length)];
-				seasonalQuote.textContent = quote;
-			}
+			console.log("Current season:", season); // Log the current season
 
 			const seasonLabel = document.getElementById('season-label');
 			if (seasonLabel) {
+				console.log("Season label element found:", seasonLabel); // Log if the element is found
 				seasonLabel.textContent = season + ' ' + now.getFullYear();
-			}
-		});
+				console.log("Season label updated to:", seasonLabel.textContent); // Log the updated content
+			} else {
+				console.log("Season label element not found!"); // Log if the element is missing
+
+
+				// Sets seasonal favicon
+				const seasonalFavicons = {
+					spring: "img/spring.png",
+					summer: "img/summer.png",
+					fall: "img/fall.png",
+					winter: "img/winter.png"
+				};
+				const favicon = document.getElementById("dynamic-favicon");
+				if (favicon && seasonalFavicons[season]) {
+					favicon.href = seasonalFavicons[season];
+				}
+
+				// Defines seasonal quotes
+				const quotesBySeason = {
+					spring: [
+						`“Spring is the time of plans and projects.” — Tolstoy`, // Anna Karenina, Part 1, Ch. 1
+						`“The sun was warm but the wind was chill. / You know how it is with an April day.” — Robert Frost`, // “Two Tramps in Mud Time” (1934)
+						`“Everything was blooming: the grass, the trees, and something in the soul.” — Tolstoy`, // Resurrection
+						`“April is the cruelest month, breeding / Lilacs out of the dead land” — T. S. Eliot` // The Waste Land (1922)
+					],
+					summer: [
+						`“It was the season of excess, of bloom and blur and burn.” — bell hooks`, // Belonging: A Culture of Place (2009)
+						`“In the heat of the summer sun, there was something false and oppressive in everything.” — Tolstoy` // Anna Karenina (Book 2)
+							`“Green was the silence, wet was the light, the month of June trembled like a butterfly.” — Pablo Neruda` // "The Poetry”
+					],
+					fall: [
+						`“The tints of autumn... a melancholy and graceful robe.” — Hawthorne`, // “The Old Manse” (1846)
+						`“Whoever has no house now will not build one anymore. / Whoever is alone will stay alone for long...” — Rilke`, // “Herbsttag / Autumn Day,” from *The Book of Images* (1902), trans. Stephen Mitchell
+						`“To be rooted is perhaps the most important and least recognized need of the human soul.” — Simone Weil` // The Need for Roots (1949)
+					],
+					winter: [
+						`“In seed time learn, in harvest teach, in winter enjoy.” — William Blake`, // The Marriage of Heaven and Hell (1790–93)
+						`“A beautiful thing, though always a source of sadness, is never sad in itself.” — Simone Weil`, // Gravity and Grace (1947)
+						`“There's a certain Slant of light, / Winter Afternoons — / That oppresses, like the Heft / Of Cathedral Tunes.” — Emily Dickinson`, // “There’s a certain Slant of light” (Poem 258, ca. 1861)
+						`“Even silence is an answer.” — Wendell Berry` // “Healing” in *What Are People For?* (1990)
+					]
+				};
+
+				// Randomly appoints quote for season
+				const seasonalQuote = document.getElementById('seasonal-quote');
+				if (seasonalQuote && quotesBySeason[season]) {
+					const quotes = quotesBySeason[season];
+					const quote = quotes[Math.floor(Math.random() * quotes.length)];
+					seasonalQuote.textContent = quote;
+				}
+
+				const seasonLabel = document.getElementById('season-label');
+				if (seasonLabel) {
+					seasonLabel.textContent = season + ' ' + now.getFullYear();
+				}
+			});
 	</script>
 
 
