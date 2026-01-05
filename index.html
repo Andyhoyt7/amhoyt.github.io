@@ -290,11 +290,22 @@
 			margin-top: 1.0em;
 		}
 
+		/* Make sure the animated overlay sits behind the page content */
+		body {
+			position: relative;
+		}
+
+		body::after {
+			z-index: 0;
+		}
+
+		/* Hover-caption image */
 		.image-hover {
 			position: relative;
 			float: right;
 			width: 220px;
 			margin: 0.3em 0 0.5em 1.4em;
+			z-index: 2;
 		}
 
 		.image-hover img {
@@ -318,6 +329,7 @@
 			border-radius: 0 0 8px 8px;
 			opacity: 0;
 			transition: opacity 0.3s ease;
+			z-index: 3;
 		}
 
 		.image-hover:hover .image-caption {
@@ -457,16 +469,17 @@
 
 	<!-- first about section. Just a few paragraphs of text. -->
 	<section id="broad strokes">
-		<p>
+
 		<div class="image-hover">
 			<img src="img/andy.jpg" alt="Andy Hoyt">
 			<div class="image-caption">Photo by … · Princeton, 2024</div>
 		</div>
 
-		I'm a PhD candidate in the history of science at Princeton University, where I study the history of
-		ecology and environmental governance in the twentieth and twenty-first centuries. My work engages with the
-		history of
-		science, environmental and political history, and North American Indigenous history.
+		<p>
+			I'm a PhD candidate in the history of science at Princeton University, where I study the history of
+			ecology and environmental governance in the twentieth and twenty-first centuries. My work engages with the
+			history of
+			science, environmental and political history, and North American Indigenous history.
 		</p>
 
 		<p>
