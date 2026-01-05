@@ -289,6 +289,40 @@
 		details summary+ul.inline-spaced {
 			margin-top: 1.0em;
 		}
+
+		.image-hover {
+			position: relative;
+			float: right;
+			width: 220px;
+			margin: 0.3em 0 0.5em 1.4em;
+		}
+
+		.image-hover img {
+			width: 100%;
+			border-radius: 8px;
+			opacity: 0.95;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+			display: block;
+		}
+
+		.image-caption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 0.4em 0.6em;
+			font-size: 0.8em;
+			font-style: italic;
+			color: #f9f8f4;
+			background: rgba(47, 47, 47, 0.65);
+			border-radius: 0 0 8px 8px;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.image-hover:hover .image-caption {
+			opacity: 1;
+		}
 	</style>
 
 	<!-- External script for Goatcounter analytics platform. Check analytics at https://amhoyt.goatcounter.com/ -->
@@ -424,13 +458,15 @@
 	<!-- first about section. Just a few paragraphs of text. -->
 	<section id="broad strokes">
 		<p>
-			<img src="img/andy.jpg" alt="Andy Hoyt"
-				style="float: right; width: 220px; margin: 0.3em 0 0.5em 1.4em; border-radius: 8px; opacity: 0.95; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+		<div class="image-hover">
+			<img src="img/andy.jpg" alt="Andy Hoyt">
+			<div class="image-caption">Photo by … · Princeton, 2024</div>
+		</div>
 
-			I'm a PhD candidate in the history of science at Princeton University, where I study the history of
-			ecology and environmental governance in the twentieth and twenty-first centuries. My work engages with the
-			history of
-			science, environmental and political history, and North American Indigenous history.
+		I'm a PhD candidate in the history of science at Princeton University, where I study the history of
+		ecology and environmental governance in the twentieth and twenty-first centuries. My work engages with the
+		history of
+		science, environmental and political history, and North American Indigenous history.
 		</p>
 
 		<p>
